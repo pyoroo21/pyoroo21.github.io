@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <script src="https://fantest14122017-pyoroo.c9users.io/Prebid.js-master/src/prebid_20171214092706222.js" async></script>
+    
+    <script>
+      var PREBID_TIMEOUT = 2000;
+      var adUnits = [{
+        code: 'div-gpt-ad-1',
+        sizes: [[300, 250]],
+        bids: [{
+          bidder: 'audienceNetwork',
+          params: {
+            //placementId: '118220978561571_429341210782878'
+            placementId: '1850047528605546_2058723937737903'
+            
+          }
+        }]
+      }];
+      (function () {
+        
+        
+        
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+      });
+      googletag.cmd.push(function () {
+        googletag.defineSlot('/54730157/mweb_test_300_250', [[300, 250]], 'div-facebook-mweb-ad').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+      var sendAdserverRequest = function () {
+        if (pbjs.adserverRequestSent) return;
+        pbjs.adserverRequestSent = true;
+        googletag.cmd.push(function() {
+          pbjs.que.push(function() {
+            pbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh();
+          });
+        });
+      };
+      setTimeout(function() {
+        sendAdserverRequest();
+      }, PREBID_TIMEOUT);
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+      pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: sendAdserverRequest
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Prebid.js Test</h2>
+    <div id='div-facebook-mweb-ad'>
+      <script>
+        googletag.cmd.push(function() {
+          googletag.display('div-facebook-mweb-ad');
+        });
+      </script>
+      
+    </div>
+    <div>
+      <p>Audience Network quick start</p>
+      <ol>
+        <li>Create a new App at <a href="https://developers.facebook.com/apps">https://developers.facebook.com/apps</a></li>
+        <li>Add the Audience Network product to it</li>
+        <li>Create a new Placement to generate your placementId</li>
+        <li>To test, ensure the User-Agent request header represents a mobile device</li>
+      </ol>
+    </div>
+  </body>
+</html>
