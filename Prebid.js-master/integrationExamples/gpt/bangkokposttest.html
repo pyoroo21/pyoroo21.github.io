@@ -105,13 +105,7 @@
                                 }
                             }]}};
           pbjs.que.push(function() {
-		  pbjs.setConfig({
-                     "priceGranularity": "low",
-                     "currency": {
-                        "adServerCurrency": "PHP",
-                        "granularityMultiplier": 10
-                     }
-                  });
+
               pbjs.addAdUnits(adUnits);
               pbjs.requestBids({
                   bidsBackHandler: sendAdserverRequest
