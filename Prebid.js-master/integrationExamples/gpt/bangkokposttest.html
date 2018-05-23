@@ -404,12 +404,21 @@ var OA_zones = {
 			}
 		]
 	};
-
+	
 	pbjs.que.push(function() {
+                  pbjs.setConfig({
+                     "priceGranularity": "low",
+                     "currency": {
+                        "adServerCurrency": "PHP",
+                        "granularityMultiplier": 10
+                     })
+	})
+
+	/*pbjs.que.push(function() {
 		pbjs.setConfig({
 			priceGranularity: customConfigObject
 		})
-	})
+	})*/
 	
 </script>
 
