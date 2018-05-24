@@ -110,13 +110,13 @@
               pbjs.requestBids({
                   bidsBackHandler: sendAdserverRequest
               });
-              pbjs.setConfig({
+              /*pbjs.setConfig({
                      "priceGranularity": "dense",
                      "currency": {
                         "adServerCurrency": "PHP",
                         "granularityMultiplier": 53
                      }
-                  });
+                  });*/
           });
           function sendAdserverRequest() {
               if (pbjs.adserverRequestSent) return;
