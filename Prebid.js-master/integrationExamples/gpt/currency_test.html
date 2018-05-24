@@ -107,9 +107,7 @@
           pbjs.que.push(function() {
 
               pbjs.addAdUnits(adUnits);
-              pbjs.requestBids({
-                  bidsBackHandler: sendAdserverRequest
-              });
+         
               pbjs.setConfig({
                      "priceGranularity": "med",
                      "currency": {
@@ -117,6 +115,9 @@
                         "granularityMultiplier": 52
                      }
                   });
+              pbjs.requestBids({
+                  bidsBackHandler: sendAdserverRequest
+              });
           });
           function sendAdserverRequest() {
               if (pbjs.adserverRequestSent) return;
