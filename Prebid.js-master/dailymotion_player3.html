@@ -1,41 +1,17 @@
 <html>
 <head>
+<script src="https://api.dmcdn.net/all.js"></script>
+<div id="player"></div>
 <script>
-  window.dmAsyncInit = function()
-  {
-    DM.init({ apiKey: '16bb2ca3b5735b541a91', status: false, cookie: false });
-  };
-  (function() {
-    var e = document.createElement('script');
-    e.async = true;
-    e.src = 'https://api.dmcdn.net/all.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(e, s);
-  }());
-  
-  
-  
-  var handleAPIResponse = function (response) {
-  var videos = response.list;
-  var player = DM.player(document.getElementById('player'), {
-    video: videos.shift().id
-  });
-
-  // At the end of a video, load the next video if any
-  player.addEventListener('end', function (e)
-  {
-    var nextVideo = videos.shift();
-    if (nextVideo) {
-      e.target.load(nextVideo.id);
+var player = DM.player(document.getElementById("player"), {
+    video: "xwr14q",
+    width: "100%",
+    height: "100%",
+    params: {
+        autoplay: true,
+        mute: true
     }
-  });
-};
-
-DM.api('/videos', {
-  filters: 'buzz',
-  fields: 'id',
-  limit: 100
-}, handleAPIResponse);
+});
 </script>
 </head>
 </html>
