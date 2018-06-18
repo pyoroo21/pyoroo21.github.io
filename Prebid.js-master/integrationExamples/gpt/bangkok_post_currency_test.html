@@ -2,6 +2,7 @@
 <html>
     <head>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script type="text/javascript" src="prebid.js" async></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-1356834699257029",
@@ -75,13 +76,7 @@
               }
             }]
           }];
-
-        </script>
-        
-        
-    <script type="text/javascript" src="prebid.js" async></script>
-     <script>
-         const customConfigObject = {
+           const customConfigObject = {
                 "buckets": [{
                            "precision": 2,
                            "min": 0,
@@ -102,8 +97,23 @@
                      }
                 ]
            };
+
+
+        
+        
+
+
+        
           var googletag = googletag || {};
           googletag.cmd = googletag.cmd || [];
+          googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+          
+                             var pbjs = pbjs || {};
+          pbjs.que = pbjs.que || [];
+          
+          
           pbjs.bidderSettings = {
                     standard: {
                         adserverTargeting: [
@@ -127,8 +137,7 @@
                                 }
                             }]}};
          
-                   var pbjs = pbjs || {};
-          pbjs.que = pbjs.que || [];
+
           pbjs.que.push(function() {
               pbjs.addAdUnits(adUnits);
          
