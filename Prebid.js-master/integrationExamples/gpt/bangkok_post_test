@@ -1,0 +1,1243 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Bangkok Post</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Bangkok Post Public Company Limited">
+	<meta http-equiv="cleartype" content="on">
+    
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0,user-scalable=1">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@BangkokPostNews">
+	
+
+	
+	<!-- <link rel="stylesheet" href="/resources/css/all.min.css?v=6" type="text/css"> -->
+
+    <link rel="stylesheet" href="/resources/css/nav.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/base.css?v=1.5" type="text/css">
+    <link rel="stylesheet" href="/resources/css/jquery.rating.min.css" type="text/css">
+	
+		
+
+	<!-- <script src="/resources/js/all.min.js?v=3"></script> -->
+	
+	<script src="/resources/js/jquery.min.js"></script>
+	<script src="/resources/js/jquery.cookie.js"></script>
+	<script src="/resources/js/carousel.js"></script>
+	<script type="text/javascript" src="https://www.bangkokpost.com/common/js/postAd.js"></script>
+	<script type="text/javascript" src="/resources/js/advertorial.js"></script>
+	<script src="/resources/js/jquery.rating.js"></script>
+	<script src="/resources/js/common.js"></script>
+	<script src="https://ads3.bangkokpost.co.th/www/delivery/spcjs.php?id=5"></script>
+	<script src="https://ads3.bangkokpost.co.th/www/delivery/fl.js"></script>
+	
+	<!-- <script src="/resources/js/jquery.min.js"></script>
+	<script src="/resources/js/carousel.js"></script> -->
+	<script type='text/javascript'>
+<!--// <![CDATA[
+	var OA_zones = {'1800':1800,'2147':2147,'2148':2148,'1801':1801,'2149':2149,'2150':2150,'1802':1802,'2151':2151,'2152':2152,'2763':2763,'2764':2764,'2765':2765,'2766':2766,'2767':2767}
+// ]]> -->
+</script>
+
+	<script type="text/javascript" src="//ads3.bangkokpost.co.th/www/delivery/spcjs.php?id=5"></script>
+	    <!-- <script src="/resources/js/jquery.rating.js"></script> -->
+    
+
+
+	<script type="text/javascript">
+		var width = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+
+		function OA_show_responsive(S, M, L){
+
+			/*
+				var openxIsIE = openxDetectIE();
+				var isHomepage = false;
+
+				if (window.location.pathname == '/') {
+					isHomepage = true;
+				}
+
+				if (openxIsIE && isHomepage) {
+					return;
+				}
+			*/
+
+			if (width >0 && width < 659) {
+				OA_show(S);
+			} else if (width >= 660 && width < 979) {
+				OA_show(M);
+			} else {
+				OA_show(L);
+			}
+		}
+
+		function openxDetectIE() {
+			var ua = window.navigator.userAgent;
+
+			var msie = ua.indexOf('MSIE ');
+				if (msie > 0) {
+				// IE 10 or older => return version number
+				return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+			}
+
+			var trident = ua.indexOf('Trident/');
+			if (trident > 0) {
+				// IE 11 => return version number
+				var rv = ua.indexOf('rv:');
+				return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+			}
+
+			var edge = ua.indexOf('Edge/');
+			if (edge > 0) {
+				// IE 12 => return version number
+				return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+			}
+
+			// other browser
+			return false;
+		}
+		
+		function dfp_show_responsive(S, M, L) {
+			if (width >0 && width < 659) {
+				dfp_show(S);
+			} else if (width >= 660 && width < 979) {
+				dfp_show(M);
+			} else {
+				dfp_show(L);
+			}
+		}
+
+		function dfp_show(zone) {
+			document.write("<div id='"+zone+"'>");
+			googletag.cmd.push(function() { googletag.display(zone); });
+			document.write("</div>");
+		}
+
+	</script>
+	
+		<!-- DFP -->
+	<!-- Prebid Config Section START -->
+	<!-- Make sure this is inserted before your GPT tag -->
+	<script type="text/javascript" src="https://www.bangkokpost.com/common/js/prebid.js" async></script>
+	<script>
+		
+		// Disable app nexus
+		
+		var PREBID_TIMEOUT = 700;
+
+		var adUnits = [{
+			code: 'div-gpt-ad-rec-1',
+			sizes: [[300, 250]],
+			bids: [{
+				bidder: 'appnexus',
+				params: {
+				   placementId: '12712128'
+				}
+			},{
+   bidder: 'audienceNetwork',
+   params: {
+    placementId: '971797679667917_985678078279877'
+   }
+  }]
+		},{
+			code: 'div-gpt-ad-rec-2',
+			sizes: [[300, 250]],
+			bids: [{
+				bidder: 'appnexus',
+				params: {
+				   placementId: '12712129'
+				}
+			},{
+   bidder: 'audienceNetwork',
+   params: {
+    placementId: '971797679667917_985678461613172'
+   }
+  }]
+		}];
+
+		var pbjs = pbjs || {};
+		pbjs.que = pbjs.que || [];
+
+
+		pbjs.bidderSettings = {
+			audienceNetwork: {
+				adserverTargeting: [
+					  {
+						  key: "fb_bidid",
+						  val: function (bidResponse) {
+							  // make the bidId available for targeting if required
+							  return bidResponse.fb_bidid;
+						  } 
+					  },
+					  {   
+						  key: "hb_bidder",
+						  val: function (bidResponse) {
+							  return bidResponse.bidderCode;
+						  }
+					  },
+					  {
+						key: "hb_pb",
+						val: function(bidResponse) {
+						  return bidResponse.pbMg  / 0.031;
+						}
+					  },
+				  ],
+			  },
+			appnexus: {
+				bidCpmAdjustment: function(bidCpm) {
+					return bidCpm / 0.031; //please make a config var eg. 0.031
+				}
+			}
+		};
+
+		const customConfigObject = {
+			"buckets": [{
+					"precision": 2,
+					"min": 0,
+					"max": 100,
+					"increment": 0.50
+				},
+				{
+					"precision": 2,
+					"min": 100,
+					"max": 300,
+					"increment": 1.00
+				},
+				{
+					"precision": 2,
+					"min": 300,
+					"max": 700,
+					"increment": 20.0
+				}
+			]
+		};
+
+		pbjs.que.push(function() {
+			pbjs.setConfig({
+				priceGranularity: customConfigObject
+			})
+		})
+		
+		
+	</script><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+
+
+		
+		// Disable app nexus
+		
+		googletag.cmd.push(function() {
+			googletag.pubads().disableInitialLoad();
+		});
+		
+		pbjs.que.push(function() {
+			pbjs.addAdUnits(adUnits);
+			pbjs.requestBids({
+				bidsBackHandler: sendAdserverRequest
+			});
+		});
+		
+		function sendAdserverRequest() {
+			if (pbjs.adserverRequestSent) return;
+			pbjs.adserverRequestSent = true;
+			googletag.cmd.push(function() {
+				pbjs.que.push(function() {
+					pbjs.setTargetingForGPTAsync();
+					googletag.pubads().refresh();
+				});
+			});
+		}
+
+		setTimeout(function() {
+			sendAdserverRequest();
+		}, PREBID_TIMEOUT);
+		
+		
+</script>
+<script>
+  googletag.cmd.push(function() {
+
+	if (width >= 360) {
+		var slot = [[300, 250], [336, 280]];
+	} else {
+		var slot = [[300, 250]];
+	}
+	
+	// Rec 1
+	googletag.defineSlot('/2776261/M.BP_HP_Rec1', slot, 'div-gpt-ad-rec-1').addService(googletag.pubads());
+	// Rec 2
+	googletag.defineSlot('/2776261/M.BP_HP_Rec2', slot, 'div-gpt-ad-rec-2').addService(googletag.pubads());
+	
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().collapseEmptyDivs();
+	if (typeof cX.getUserSegmentIds !== 'undefined') googletag.pubads().setTargeting('CxSegments',cX.getUserSegmentIds({persistedQueryId:'10e5dfb6eaedc4830f2907303add881df700be72'}));
+	// googletag.pubads().setTargeting('NewsSection', []);
+	googletag.enableServices();
+
+  });
+</script>
+	
+	<!-- DFP -->
+		
+	<script language="javascript">
+		$(document).ready(function () {
+			
+            
+		});
+	</script>
+
+	<script type='text/javascript'>
+					  OA_show_responsive(1802,2151,2152);
+					 </script>
+
+
+	<!-- <script type="text/javascript" src="//www.bangkokpost.com/common/js/postAd.js"></script>
+	<script type="text/javascript" src="/resources/js/advertorial.js?v=1.1"></script> -->
+	<script type='text/javascript'>
+		var section_name = '';
+		var host_ad = '//ads4.bangkokpost.co.th';
+
+		$(document).ready(function () {
+			// add class 'pano' to img thumbnail wilder
+			$('.article_thumbnail').each(function(index){
+				var t = $(this);
+				$("<img>").attr("src", t.attr("src")).load(function(){
+					var realWidth = this.width;
+					var realHeight = this.height;
+					if (realWidth > realHeight) {
+						t.addClass('pano');
+					}
+				});
+			});
+		});
+
+	</script>
+	
+
+	<!--analytics-->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-8091193-1']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+
+
+	<!-- Hotjar Tracking Code for www.bangkokpost.com -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:599942,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+
+
+	<!-- Cxense script begin -->
+	<script type="text/javascript">
+	var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+	cX.callQueue.push(['setSiteId', '1133918090132712068']);
+	cX.callQueue.push(['sendPageViewEvent']);
+	</script>
+	<script type="text/javascript">
+	(function(d,s,e,t){e=d.createElement(s);e.type='text/java'+s;e.async='async';
+	e.src='http'+('https:'===location.protocol?'s://s':'://')+'cdn.cxense.com/cx.js';
+	t=d.getElementsByTagName(s)[0];t.parentNode.insertBefore(e,t);})(document,'script');
+	</script>
+	<!-- Cxense script end -->
+
+		<meta name="cXenseParse:pageclass" content="frontpage"/>
+						
+
+
+
+</head>
+<body class="">
+
+<!--div id="top-page">
+	<a href="//www.bangkokpost.com/nation-in-mourning"><img src="/resources/img/banner/banner_mdot.jpg" alt="In Remembrance of His Majesty King Bhumibol Adulyadej 1927 - 2016"></a>
+</div-->
+
+<!-- <div id="top-page">
+	<a href="https://kingrama9.bangkokpost.com/"><img src="/resources/img/banner/MdotBanner_BP_v2.jpg" alt="Returning to Heaven. His kindness and compassion will remain in the hearts of Thais forever. Royal cremation ceremonies for the late King Bhumibol Adulyadej"></a>
+</div>  -->
+
+
+<header class="homepage">
+
+	<div id="main-nav">
+    	<div id="logo"><a href="/"><img src="/resources/img/photo/bp-logo.svg" alt="Bangkok Post - The world's window on Thailand" width="155"></a></div>
+    	<nav>
+        	<button class="switchmenu switchmenu--htx">
+              <span>toggle menu</span>
+            </button>
+            <div>
+                <ul>
+
+                    <li>
+                        <form class="websearch" onsubmit="return goSearchSlidebar();">
+                            <input type="text" placeholder="WEB SEARCH" id="searchWordsSlidebar" name="keyword">
+                        </form>
+                    </li>
+                </ul>
+                <ul>
+                    <li><h2>ALL SECTIONS</h2></li>
+                    <li><a href="/" title="Home">Home</a></li>
+                    <li><a href="/news" title="News">News</a></li>
+                    <li><a href="/business" title="Business">Business</a></li>
+                    <li><a href="/vdo" title="Video">Video</a></li>
+                    <li><a href="/photo" title="Photos">Photos</a></li>
+                    <li><a href="/opinion" title="Opinion">Opinion</a></li>
+                    <li><a href="/learning" title="Learning">Learning</a></li>
+                    <li><a href="/lifestyle" title="Lifestyle">Lifestyle</a></li>
+                    <li><a href="/travel" title="Travel">Travel</a></li>
+                    <li><a href="/tech" title="Technology">Technology</a></li>
+                    <li><a href="//property.bangkokpost.com/mobile" title="Property">Property</a></li>
+                    <li><a href="/auto" title="Auto">Auto</a></li>
+                    <li><a href="//job.bangkokpost.com/mobile/" title="Jobs">Jobs</a></li>
+					<li><a href="//www.bangkokpost.com/forum/" title="Expat forum">Expat forum</a></li>
+                    <li><a href="//www.bangkokpost.com/thailandguide/" title="Thailand guide">Thailand guide</a></li>
+                </ul>
+                <ul>
+                    <li><h2>SHORTCUTS</h2></li>
+                    <li><a href="/news/topstories" title="Top story">Top story</a></li>
+                    <li><a href="/news/most-recent" title="Most recent">Most recent</a></li>
+                    <li><a href="//www.bangkokpost.com/hot-topics" title="Hot topics">Hot topics</a></li>
+                </ul>
+                <ul>
+                    <li><h2>OTHER</h2></li>
+                    <li><a href="https://www.bangkokpost.com/epaper" title="E-newspaper" rel="nofollow">E-newspaper</a></li>
+                    <li><a href="https://www.bangkokpost.com/subscribe" title="Home delivery" rel="nofollow">Home delivery</a></li>
+                    <li><a href="https://www.bangkokpost.com/archive" title="Digital archive" rel="nofollow">Digital archive</a></li>
+                    <li><a href="https://www.bangkokpost.com/sms" title="SMS">SMS</a></li>
+                     <li><a href="https://www.bangkokpost.com/mediainfo/inquiry" title="Advertise with us" rel="nofollow">Advertise with us</a></li>
+                </ul>
+             </div>
+        </nav>
+    </div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+</header><script type='text/javascript'>
+/*
+// Business
+var url_ads_homepage1 =  post_writeAd_json("&SITE=M.BANGKOKPOST&AREA=HOMEPAGE&TYPE=SPECIAL+CONTENT&POSITION=HOMEPAGE+LOCATION+1&METHOD=JSCRIPT&CATEGORY=BUSINESS&KEYWORD=&FONT_COLOR==&FRAMESIZE=300X109&FORMAT=JSON");
+
+// Lifestyle
+var url_ads_homepage2 = post_writeAd_json("&SITE=M.BANGKOKPOST&AREA=HOMEPAGE&TYPE=SPECIAL+CONTENT&POSITION=HOMEPAGE+LOCATION+1&METHOD=JSCRIPT&CATEGORY=LIFESTYLE&KEYWORD=&FONT_COLOR==&FRAMESIZE=300X109&FORMAT=JSON");
+
+// Auto
+var url_ads_homepage3 = post_writeAd_json("&SITE=M.BANGKOKPOST&AREA=HOMEPAGE&TYPE=SPECIAL+CONTENT&POSITION=HOMEPAGE+LOCATION+1&METHOD=JSCRIPT&CATEGORY=AUTO&KEYWORD=&FONT_COLOR==&FRAMESIZE=300X109&FORMAT=JSON");
+
+var data_ads1 = '';
+var data_ads2 = '';
+var data_ads3 = '';
+var is_get_data_ads1 = false;
+var is_get_data_ads2 = false;
+var is_get_data_ads3 = false;
+var arr_data_ads4 = new Array();
+index_data_ads4 = 0;
+
+$(document).ready(function () {
+
+	$.getJSON(url_ads_homepage1,function(data){
+		if (data){
+			arr_data_ads4[index_data_ads4++] = data;
+		}
+		is_get_data_ads1 = true;
+		process_show_ads4_homepage();
+	});
+	$.getJSON(url_ads_homepage2,function(data){
+		if (data){
+			arr_data_ads4[index_data_ads4++] = data;
+		}
+		is_get_data_ads2 = true;
+		process_show_ads4_homepage();
+	});
+	$.getJSON(url_ads_homepage3,function(data){
+		if (data){
+			arr_data_ads4[index_data_ads4++] = data;
+		}
+		is_get_data_ads3 = true;
+		process_show_ads4_homepage();
+	});
+});
+*/
+
+
+</script>
+
+<section id="content">
+
+	<div id="sp-carousel" class="sp-wrapper slide-hp">
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/world/1487522/strong-earthquake-shakes-japans-osaka-in-rush-hour"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487522_180618103637_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Quake shakes Osaka" href="https://m.bangkokpost.com/news/world/1487522/strong-earthquake-shakes-japans-osaka-in-rush-hour">Quake shakes Osaka</a></h3>
+			<p>				
+				
+				<span class="icon-vdo">video</span>
+				
+								
+				At least 3 die, more than 200 injured as strong earthquake rocks Japan's second city of Osaka during Monday's morning rush hour.
+				<span class="update">update</span> 
+			</p>
+			<p class="day-time">18 Jun 2018 at 10:35</p>
+		</div>
+	</div>
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/general/1487154/doi-suthep-activists-vow-protest"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487154_180618044240_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Mountain's wound reopened" href="https://m.bangkokpost.com/news/general/1487154/doi-suthep-activists-vow-protest">Mountain's wound reopened</a></h3>
+			<p>				
+				
+				
+				
+								
+				There is no forest restoration on Doi Suthep, as ordered by the prime minister. Judicial staff have moved into houses and flats, against government orders.
+				 
+			</p>
+			<p class="day-time">18 Jun 2018 at 04:30</p>
+		</div>
+	</div>
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/general/1487198/grand-palace-touts-nabbed"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487198_180618044904_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Scam interrupted" href="https://m.bangkokpost.com/news/general/1487198/grand-palace-touts-nabbed">Scam interrupted</a></h3>
+			<p>				
+				
+				
+				
+								
+				The Tourism Police Bureau swooped on the Grand Palace entrance and arrested 87 people accused of carrying out one of the oldest and best-known tourist scams.
+				 
+			</p>
+			<p class="day-time">18 Jun 2018 at 06:02</p>
+		</div>
+	</div>
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/general/1487166/airport-immigration-procedures-surge"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487166_180618095035_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Help arrives" href="https://m.bangkokpost.com/news/general/1487166/airport-immigration-procedures-surge">Help arrives</a></h3>
+			<p>				
+				
+				
+				
+								
+				Immigration has deployed 254 new agents to airports to handle the ever-increasing flow of incoming visitors - and to keep out thousands of undesirables.
+				 
+			</p>
+			<p class="day-time">18 Jun 2018 at 06:28</p>
+		</div>
+	</div>
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/general/1487150/parks-department-chief-probed-for-funds-misuse"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487150_180618043652_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Parks chief under fire" href="https://m.bangkokpost.com/news/general/1487150/parks-department-chief-probed-for-funds-misuse">Parks chief under fire</a></h3>
+			<p>				
+				
+				
+				
+								
+				The Environment Ministry is investigating National Parks head Thanya Nethithammakul over misuse or embezzlement in a 108-million baht reforestation project.
+				 
+			</p>
+			<p class="day-time">18 Jun 2018 at 08:30</p>
+		</div>
+	</div>
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/sports/1487142/favourites-germany-brazil-stumble"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487142_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Favourites stumble" href="https://m.bangkokpost.com/news/sports/1487142/favourites-germany-brazil-stumble">Favourites stumble</a></h3>
+			<p>				
+				
+				
+				
+								
+				Mexico stunned the World Cup defending champions Germany 1-0 while Neymar's Brazil looked stale as they managed only a 1-1 draw with Switzerland.
+				<span class="update">update</span> 
+			</p>
+			<p class="day-time">18 Jun 2018 at 03:01</p>
+		</div>
+	</div>
+		<div class="item">
+		<div class="slider_hightlight slider">
+			<a href="https://m.bangkokpost.com/news/general/1487214/police-struggle-in-online-betting-battle"><img class='pano' src="https://www.bangkokpost.com/media/content/20180618/c1_1487214_180618044530_659x439.jpg"></a>
+		</div>
+		<div class="slide-detail">
+			<h3><a title="Web of difficulty" href="https://m.bangkokpost.com/news/general/1487214/police-struggle-in-online-betting-battle">Web of difficulty</a></h3>
+			<p>				
+				
+				
+				
+								
+				Police involved in their World Cup's 'crackdown on gambling' admit that it's a lot easier to find gamblers in dens than tech-savvy users doing it online.
+				 
+			</p>
+			<p class="day-time">18 Jun 2018 at 04:30</p>
+		</div>
+	</div>
+	 </div><!--end sp-carousel-->
+
+
+		<div class="boomBox first">
+											<script type='text/javascript'>
+	dfp_show('div-gpt-ad-rec-1');
+</script>
+									</div> <!-- end boomBox -->
+	
+	 <div class="highlight-list">
+	<h2 class="headline"><a href="/news/topstories">TOP STORIES</a></h2>
+	<ul>
+				<li>
+			<p>
+				<a title="Strong earthquake shakes Japan's Osaka in rush hour" href="https://m.bangkokpost.com/news/world/1487522/strong-earthquake-shakes-japans-osaka-in-rush-hour" class="thumbnail">
+					<img class="article_thumbnail" alt="Strong earthquake shakes Japan's Osaka in rush hour" src="https://www.bangkokpost.com/media/content/20180618/c1_1487522_180618103637_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail"> 				
+				<h3>
+					<a title="Strong earthquake shakes Japan's Osaka in rush hour" href="https://m.bangkokpost.com/news/world/1487522/strong-earthquake-shakes-japans-osaka-in-rush-hour">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					Strong earthquake shakes Japan's Osaka in rush hour
+					<span class="update">update</span>
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 10:35</p>
+			</div>
+		</li>
+				<li>
+			<p>
+				<a title="World Cup 2018 schedule & predictions" href="https://m.bangkokpost.com/news/sports/1484097/world-cup-2018-schedule-predictions" class="thumbnail">
+					<img class="article_thumbnail" alt="World Cup 2018 schedule & predictions" src="https://www.bangkokpost.com/media/content/20180613/c1_1484097_180618140635_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail"> 				
+				<h3>
+					<a title="World Cup 2018 schedule & predictions" href="https://m.bangkokpost.com/news/sports/1484097/world-cup-2018-schedule-predictions">
+					<span class="icon-photo">photo</span>
+					
+					
+					<span class="analysis">Analysis</span>
+					World Cup 2018 schedule & predictions
+					<span class="update">update</span>
+					</a>
+				</h3>
+				<p class="day-time">17 Jun 2018 at 23:59</p>
+			</div>
+		</li>
+		 
+		
+	</ul>
+ </div>
+
+     <div class="highlight-list">
+<h2 class="headline"><a href="/news/most-recent">MOST RECENT</a></h2>
+	<ul>
+		
+		
+		<li>
+			<p>
+				<a title="Strong earthquake shakes Japan's Osaka in rush hour" href="https://m.bangkokpost.com/news/world/1487522/strong-earthquake-shakes-japans-osaka-in-rush-hour" class="thumbnail">
+					<img class="article_thumbnail" alt="Strong earthquake shakes Japan's Osaka in rush hour" src="https://www.bangkokpost.com/media/content/20180618/c1_1487522_180618103637_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Strong earthquake shakes Japan's Osaka in rush hour" href="https://m.bangkokpost.com/news/world/1487522/strong-earthquake-shakes-japans-osaka-in-rush-hour">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					Strong earthquake shakes Japan's Osaka in rush hour
+					<span class="update">update</span>
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 10:35</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="Injured former Cambodian PM Ranariddh 'in Bangkok hospital'" href="https://m.bangkokpost.com/news/asean/1487622/injured-former-cambodian-pm-ranariddh-in-bangkok-hospital" class="thumbnail">
+					<img class="article_thumbnail" alt="Injured former Cambodian PM Ranariddh 'in Bangkok hospital'" src="https://www.bangkokpost.com/media/content/20180618/c1_1487622_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Injured former Cambodian PM Ranariddh 'in Bangkok hospital'" href="https://m.bangkokpost.com/news/asean/1487622/injured-former-cambodian-pm-ranariddh-in-bangkok-hospital">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					Injured former Cambodian PM Ranariddh 'in Bangkok hospital'
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 13:51</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="Landslides, flash floods as monsoon batters southern Myanmar" href="https://m.bangkokpost.com/news/asean/1487642/landslides-flash-floods-as-monsoon-batters-southern-myanmar" class="thumbnail">
+					<img class="article_thumbnail" alt="Landslides, flash floods as monsoon batters southern Myanmar" src="https://www.bangkokpost.com/media/content/20180618/c1_1487642_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Landslides, flash floods as monsoon batters southern Myanmar" href="https://m.bangkokpost.com/news/asean/1487642/landslides-flash-floods-as-monsoon-batters-southern-myanmar">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					Landslides, flash floods as monsoon batters southern Myanmar
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 14:18</p>
+			</div>
+		</li>
+		
+					<li id="adver1"></li>
+		
+		<li>
+			<p>
+				<a title="Philippine troops clash with remnants of defeated Islamist group" href="https://m.bangkokpost.com/news/asean/1487630/philippine-troops-clash-with-remnants-of-defeated-islamist-group" class="thumbnail">
+					<img class="article_thumbnail" alt="Philippine troops clash with remnants of defeated Islamist group" src="https://www.bangkokpost.com/media/content/20180618/c1_1487630_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Philippine troops clash with remnants of defeated Islamist group" href="https://m.bangkokpost.com/news/asean/1487630/philippine-troops-clash-with-remnants-of-defeated-islamist-group">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					Philippine troops clash with remnants of defeated Islamist group
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 14:09</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="Emerging Asia hit by biggest exodus since 2008" href="https://m.bangkokpost.com/business/news/1487634/emerging-asia-hit-by-biggest-foreign-investor-exodus-since-2008" class="thumbnail">
+					<img class="article_thumbnail" alt="Emerging Asia hit by biggest exodus since 2008" src="https://www.bangkokpost.com/media/content/20180618/c1_1487634_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Emerging Asia hit by biggest exodus since 2008" href="https://m.bangkokpost.com/business/news/1487634/emerging-asia-hit-by-biggest-foreign-investor-exodus-since-2008">
+					
+					
+					
+					
+					Emerging Asia hit by biggest exodus since 2008
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 13:58</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="SET down 21.01 points to 1,683.81 at midday" href="https://m.bangkokpost.com/business/finance/1487614/set-down-21-01-points-to-1-683-81-at-midday" class="thumbnail">
+					<img class="article_thumbnail" alt="SET down 21.01 points to 1,683.81 at midday" src="https://www.bangkokpost.com/media/content/20180618/c1_1487614_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="SET down 21.01 points to 1,683.81 at midday" href="https://m.bangkokpost.com/business/finance/1487614/set-down-21-01-points-to-1-683-81-at-midday">
+					
+					
+					
+					
+					SET down 21.01 points to 1,683.81 at midday
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 12:37</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="England seek World Cup exorcism as Belgium expects" href="https://m.bangkokpost.com/news/sports/1487550/england-seek-world-cup-exorcism-as-belgium-expects" class="thumbnail">
+					<img class="article_thumbnail" alt="England seek World Cup exorcism as Belgium expects" src="https://www.bangkokpost.com/media/content/20180618/c1_1487550_180618121158_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="England seek World Cup exorcism as Belgium expects" href="https://m.bangkokpost.com/news/sports/1487550/england-seek-world-cup-exorcism-as-belgium-expects">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					England seek World Cup exorcism as Belgium expects
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 12:15</p>
+			</div>
+		</li>
+		
+					<li id="adver2"></li>
+		
+		<li>
+			<p>
+				<a title="Four villages in storm-hit Phangnga  now 'disaster zones'" href="https://m.bangkokpost.com/news/general/1487562/four-villages-in-storm-hit-phangnga-now-disaster-zones" class="thumbnail">
+					<img class="article_thumbnail" alt="Four villages in storm-hit Phangnga  now 'disaster zones'" src="https://www.bangkokpost.com/media/content/20180618/c1_1487562_180618111058_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Four villages in storm-hit Phangnga  now 'disaster zones'" href="https://m.bangkokpost.com/news/general/1487562/four-villages-in-storm-hit-phangnga-now-disaster-zones">
+					
+					
+					
+					
+					Four villages in storm-hit Phangnga  now 'disaster zones'
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 11:54</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="New railways help builders become Thailand's top stocks" href="https://m.bangkokpost.com/business/news/1487586/new-railways-help-builders-become-thailands-top-stocks" class="thumbnail">
+					<img class="article_thumbnail" alt="New railways help builders become Thailand's top stocks" src="https://www.bangkokpost.com/media/content/20180618/c1_1487586_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="New railways help builders become Thailand's top stocks" href="https://m.bangkokpost.com/business/news/1487586/new-railways-help-builders-become-thailands-top-stocks">
+					
+					<span class="icon-vdo">video</span>
+					
+					
+					New railways help builders become Thailand's top stocks
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 11:40</p>
+			</div>
+		</li>
+		
+		
+		<li>
+			<p>
+				<a title="Annual battle against elephants starts early in Khon Buri" href="https://m.bangkokpost.com/news/general/1487566/annual-battle-against-elephants-starts-early-in-khon-buri" class="thumbnail">
+					<img class="article_thumbnail" alt="Annual battle against elephants starts early in Khon Buri" src="https://www.bangkokpost.com/media/content/20180618/c1_1487566_210x133.jpg" height="140">
+				</a>
+			</p>
+			<div class="detail">				
+				<h3>
+					<a title="Annual battle against elephants starts early in Khon Buri" href="https://m.bangkokpost.com/news/general/1487566/annual-battle-against-elephants-starts-early-in-khon-buri">
+					
+					
+					
+					
+					Annual battle against elephants starts early in Khon Buri
+					
+					</a>
+				</h3>
+				<p class="day-time">18 Jun 2018 at 11:36</p>
+			</div>
+		</li>
+			</ul>
+</div>
+
+     <div class="highlight-vdo">
+     	<h2 class="headline"><a href="/vdo">VIDEO</a></h2>
+        <ul>
+			        	<li>
+            	<p>
+                	<a href="https://m.bangkokpost.com/vdo/thailand/1487062/bangkok-post-top-comments">
+                    	<img class="article_thumbnail" src="https://www.bangkokpost.com/media/content/2018/06/17/454C0E9D165F43C180DFC313136C6CD3_310x188.jpg">
+                        <span>3:04</span>
+                    </a>
+                </p>
+                <div class="detail">
+                	<h3><a href="https://m.bangkokpost.com/vdo/thailand/1487062/bangkok-post-top-comments">Bangkok Post Top.Comments</a></h3>
+                    <p class="day-time">17 Jun 2018 at 16:17</p>
+                </div>
+            </li>
+                    	<li>
+            	<p>
+                	<a href="https://m.bangkokpost.com/vdo/thailand/1483617/elephants-warm-up-for-world-cup">
+                    	<img class="article_thumbnail" src="https://www.bangkokpost.com/media/content/2018/06/12/6C34B828C34F4F13A795AD93352B8942_310x188.jpg">
+                        <span>1:02</span>
+                    </a>
+                </p>
+                <div class="detail">
+                	<h3><a href="https://m.bangkokpost.com/vdo/thailand/1483617/elephants-warm-up-for-world-cup">Elephants warm up for World Cup</a></h3>
+                    <p class="day-time">12 Jun 2018 at 17:04</p>
+                </div>
+            </li>
+                    </ul>
+     </div>
+
+    		<div class="boomBox second">
+									<script type='text/javascript'>
+	dfp_show('div-gpt-ad-rec-2');
+</script>
+							</div> <!-- end boomBox -->
+	
+        <a class="backToTop" href="javascript:void(0)" onclick="$('html, body').animate({scrollTop:0}, 'slow');">Back to top</a>
+</section><footer>
+    	<div>
+            <ul>
+                <li><h3><a href="javascript:void(0);" title="NEWS &amp; BUSINESS">NEWS &amp; BUSINESS</a></h3></li>
+                <li><a href="https://www.bangkokpost.com/hot-topics" title="Hot topics" rel="nofollow">Hot topics</a></li>
+                <li><a href="/news/special-reports" title="Special reports">Special reports</a></li>
+				<li><a href="/opinion" title="Opinion">Opinion</a></li>
+				<li><a href="https://m-search.bangkokpost.com/search/result_advanced?category=news&xNewsSection=Spectrum" title="Spectrum">Spectrum</a></li>
+				<li><a href="/news/politics" title="Politics">Politics</a></li>
+				<li><a href="/business" title="Business">Business</a></li>
+				<li><a href="https://m-search.bangkokpost.com/search/result_advanced?category=news&xNewsSection=Asia+focus " title="Asia Focus">Asia Focus</a></li>
+				<li><a href="/business/finance" title="Finance">Finance</a></li>
+				<li><a href="/tech" title="Technology">Technology</a></li>
+				<li><a href="//property.bangkokpost.com/mobile/" title="Property">Property</a></li>
+				<li><a href="/news/sports" title="Sports">Sports</a></li>
+				<li><a href="/news/asean" title="Asean">Asean</a></li>
+				<li><a href="/news/world" title="World">World</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="javascript:void(0);" title="NEWS &amp; BUSINESS">TRAVEL &amp; LIFESTYLE</a></h3></li>
+                <li><a href="https://www.bangkokpost.com/thailandguide/travel/review" title="Travel reviews" rel="nofollow">Travel reviews</a></li>
+				<li><a href="/travel/around-the-globe" title="Special features">Special features</a></li>
+				<li><a href="/lifestyle/art-and-culture" title="Arts &amp; culture">Arts &amp; culture</a></li>
+				<li><a href="/auto/review" title="Auto reviews">Auto reviews</a></li>
+				<li><a href="/tech/review" title="Tech reviews">Tech reviews</a></li>
+				<li><a href="/lifestyle/family-and-health" title="Family &amp; health">Family &amp; health</a></li>
+				<li><a href="/travel/tourists-and-expats" title="Tourist &amp; expats info">Tourist &amp; expats info</a></li>
+				<li><a href="/travel/sightseeing/search/" title="Sightseeing" rel="nofollow">Sightseeing</a></li>
+				<li><a href="https://www.bangkokpost.com/travel/hotelbooking" title="Hotel booking" rel="nofollow">Hotel booking</a></li>
+				<li><a href="https://m-search.bangkokpost.com/search/result_advanced?category=news&xNewsSection=Brunch " title="Brunch">Brunch</a></li>
+				<li><a href="https://m-search.bangkokpost.com/search/result_advanced?category=news&xNewsSection=Guru" title="Guru">Guru</a></li>
+				<li><a href="https://m-search.bangkokpost.com/search/result_advanced?category=news&xNewsSection=Muse " title="Muse">Muse</a></li>
+            </ul>
+            <ul>
+				<li><h3><a href="https://www.bangkokpost.com/thailandguide" title="THAILAND GUIDE" rel="nofollow">THAILAND GUIDE</a></h3></li>
+				<li><a href="https://www.bangkokpost.com/thailandguide/restaurants/search/" title="Restaurants" rel="nofollow">Restaurants</a></li>
+				<li><a href="https://www.bangkokpost.com/lifestyle/whats-on" title="What’s on" rel="nofollow">What’s on</a></li>
+				<li><a href="/business/search" title="Business directory">Business directory</a></li>
+				<li><a href="//property.bangkokpost.com/mobile/search/service-apartment/" title="Serviced apartments">Serviced apartments</a></li>
+				<li><a href="https://www.bangkokpost.com/thailandguide/accommodation/hotel/search/" title="Hotel directory" rel="nofollow">Hotel directory</a></li>
+				<li><a href="https://www.bangkokpost.com/thailandguide/pub-and-nightlife/search/" title="Pubs &amp; nightlife" rel="nofollow">Pubs &amp; nightlife</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="javascript:void(0);" title="SERVICES">SERVICES</a></h3></li>
+                <li><a href="/vdo" title="Video">Video</a></li>
+				<li><a href="/photo" title="Photos">Photos</a></li>
+				<li><a href="https://www.bangkokpost.com/forum" title="Expat Forums" rel="nofollow">Expat Forums</a></li>
+				<li><a href="//job.bangkokpost.com/" title="Jobs &amp; career">Jobs &amp; career</a></li>
+				<li><a href="//search.bangkokpost.com" title="Web search">Web search</a></li>
+				<li><a href="/learning" title="Learning English">Learning English</a></li>
+				<li><a href="https://www.bangkokpost.com/poll" title="Polls" rel="nofollow">Polls</a></li>
+            </ul>
+            <ul class="merge">
+            	<li class="left">
+                	<ul>
+                    	<li><h3><a href="javascript:void(0);" title="TODAY'S INFO">TODAY'S INFO</a></h3></li>
+                        <li><a href="https://www.bangkokpost.com/news/weather" title="Weather forecast" rel="nofollow">Weather forecast</a></li>
+						<li><a href="/lifestyle/horoscope" title="Horoscope">Horoscope</a></li>
+						<li><a href="/auto/fuel" title="Fuel prices">Fuel prices</a></li>
+						<li><a href="https://www.bangkokpost.com/business/exchange-rate" title="Exchange rates" rel="nofollow">Exchange rates</a></li>
+						<li><a href="/business/gold" title="Gold prices">Gold prices</a></li>
+                    </ul>
+                	<ul>
+                    	<li><h3><a href="javascript:void(0);" title="OUR NETWORK">OUR NETWORK</a></h3></li>
+                        <li><a href="//www.posttoday.com" title="Post Today">Post Today</a></li>
+						<li><a href="//www.m2fjob.com" title="M2Fjob">M2Fjob</a></li>
+						<li><a href="//www.m2fnews.com" title="M2Fnews">M2Fnews</a></li>
+						<li><a href="//www.student-weekly.com" title="Student Weekly">Student Weekly</a></li>
+						<li><a href="//www.postbooksonline.com" title="Post Books">Post Books</a></li>
+						<li><a href="//www.postintermedia.com" title="International Magazines">International magazines</a></li>
+                    </ul>
+                </li>
+                <li class="right">
+                	<div>
+                        <div href="/" class="epaper" title="Click here for today's Bangkok Post newspaper">
+                            <a href="https://www.bangkokpost.com/epaper" rel="nofollow"><p class="img-wrap"><img width="155" src="//www.bangkokpost.com/ads/newspaper_direct/enewspaper.jpg?20160801" alt="Today's Bangkok Post newspaper" class="newspaper_image"></p>
+                            <p><img width="155" src="//www.bangkokpost.com/ads/newspaper_direct/enewspaper.jpg?20160801" alt="Today's Bangkok Post newspaper" class="newspaper_image"></p></a>
+                        </div>
+                        <h3><a title="Today’s paper" href="https://www.bangkokpost.com/epaper" rel="nofollow">Today’s paper</a></h3>
+                        <ol>
+                            <li><a href="//bangkokpost.newspaperdirect.com/epaper/accountingregistration.aspx" title="Digital Subscription">Digital Subscription</a></li>
+							<li><a href="https://www.bangkokpost.com/epaper/report-problem" title="Report problem" rel="nofollow">Report problem</a></li>
+							<li><a href="https://www.bangkokpost.com/subscribe" title="Home Delivery" rel="nofollow">Home Delivery</a></li>
+							<li><a href="https://www.bangkokpost.com/archive" title="Digital archive" rel="nofollow">Digital archive</a></li>
+							<li><a href="https://www.bangkokpost.com/sms" title="SMS" rel="nofollow">SMS</a></li>
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="secondary">
+        	<form onsubmit="return goSearchFooter();">
+            	<input type="text" placeholder="WEB SEARCH" id="searchWordsFooter">
+            </form>
+            <h3>Stay updated everywhere, anytime with Bangkok Post digital products</h3>
+            <ul>
+                <li><a title="Get Bangkok Post on mobile devices" href="https://www.bangkokpost.com/digitalproduct/mobile">Mobile</a></li>
+                <li><a href="https://www.bangkokpost.com/digitalproduct/tablet" rel="nofollow">Tablets</a></li>
+                <li><a href="https://www.bangkokpost.com/digitalproduct/tv" rel="nofollow">Smart TV</a></li>
+                <li><a title="E-Newsletters" href="https://www.bangkokpost.com/digitalproduct/newsletter" rel="nofollow">E-Newsletters</a></li>
+                <li><a href="https://www.bangkokpost.com/digitalproduct/rss" rel="nofollow">RSS</a></li>
+                <li><a href="//www.facebook.com/bangkokpost">Facebook</a></li>
+                <li class="twitter"><a href="https://www.bangkokpost.com/digitalproduct/twitter" rel="nofollow">Twitter</a></li>
+			</ul>
+            <div>
+                <!--p class="logo70year"><a href="//www.bangkokpost.com/bpfoundation/en/" title="70 Year post group"><img width="205" src="/resources/img/photo/post70year_logo.png" alt="70 Year post group"></a></p-->
+				<p class="logoBKPgroup"><a href="https://www.bangkokpost.co.th" title="BANGKOK POST GROUP"><img width="205" src="/resources/img/photo/postgroup-logo_blue.svg" alt="BANGKOK POST GROUP"></a></p>
+                <h2>&copy; 1996 - 2018 Bangkok Post Public Company Limited</h2>
+                <p class="footer_policy">
+                	<a title="Desktop version" href="https://www.bangkokpost.com" rel="nofollow">Desktop version</a>
+                    <a title="Terms of use" href="https://www.bangkokpost.com/policy" rel="nofollow">Terms of use</a>
+                    <a title="Republishing permission" href="https://www.bangkokpost.com/republishingpolicy" rel="nofollow">Republishing permission</a>
+                    <a title="Help" href="https://www.bangkokpost.com/faq" rel="nofollow">Help</a>
+                    <a title="Online advertising" href="https://www.bangkokpost.com/mediainfo/solution" rel="nofollow">Online advertising</a>
+                    <a title="Contact us" href="//www.bangkokpost.co.th/post_contact">Contact us</a>
+                    <a title="Tell us what you think" href="https://www.bangkokpost.com/send-suggestions" rel="nofollow">Tell us what you think</a>
+                    <a title="Partnership" href="https://www.bangkokpost.com/partner" rel="nofollow">Partnership</a>
+
+               </p>
+			</div>
+        </div>
+
+		
+		<div class="stat" id="truehits_div">
+		<script type="text/javascript"> __th_page="MOBILE_HOMEPAGE (TOP STORIES)";</script>
+		<script type="text/javascript">
+		  (function() {
+			var ga1 = document.createElement('script'); ga1.type = 'text/javascript';
+			ga1.async = true;
+			ga1.src = "//lvs.truehits.in.th/dataa/s0028944.js";
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga1, s);
+		  })();
+		</script>
+		</div>
+		
+    </footer>
+	<!-- <script src="/resources/js/common.js?v=1.2"></script> -->	
+	
+	 
+	
+	<script type="text/javascript">
+	
+	var ads4_type = "";
+	var ads4_section = "";
+	var is_first_page_sub_section = false;
+	
+	var str_path = location.pathname;
+	var arr_path = str_path.split("/");
+	if (typeof arr_path[0] === "undefined") arr_path[0] = "";
+	if (typeof arr_path[1] === "undefined") arr_path[1] = "";
+	if (typeof arr_path[2] === "undefined") arr_path[2] = "";
+	if (typeof arr_path[3] === "undefined") arr_path[3] = "";
+	if (typeof arr_path[4] === "undefined") arr_path[4] = "";
+	
+	
+	if (arr_path[1] == '') {		
+		ads4_type = "homepage";
+	} else {
+		str_section_name = arr_path[1];
+		if (arr_path[2] == '') {			
+			ads4_type = "section";
+			ads4_section = str_section_name;
+		} else if ((arr_path[3] == '') || (arr_path[3].indexOf('page-') != -1)) {
+			ads4_section = str_section_name;		
+			ads4_type = "sub_section";		
+		} else if ($.isNumeric(arr_path[3]) || $.isNumeric(arr_path[4])) {			
+			ads4_type = "article";
+			ads4_section = str_section_name;
+		} else {			
+			ads4_type = "other";
+		}
+	}
+	
+	// console.log('arr_path:'+arr_path);
+	// console.log('ads4_type:'+ads4_type);
+	// console.log('ads4_section:'+ads4_section);
+	
+	var adz = [];	
+	function OA_show_ads4(id,element_id){
+		
+		if (typeof OA_output[id] === 'undefined') {
+			console.log("OA_show not found id : "+id);
+			$("#" + element_id).remove();
+			return; 
+		}
+		
+		OA_show(id);
+		
+		if (typeof adz[id] === 'undefined') {
+			console.log("OA_show not found id : "+id);
+			$("#" + element_id).remove();
+			return; 
+		}
+		
+		if(adz[id]){			
+			var headline = adz[id]['headline'];
+			var intro = adz[id]['intro'];
+			// var src = adz[id]['src'];
+			var src = adz[id]['src'].replace("http:", "https:");
+			var click_url = adz[id]['click_url'];
+			// var view_url = adz[id]['view_url'];
+			var view_url = adz[id]['view_url'].replace("http:", "https:");
+			
+			var html_adver = '<p><a title="" href="'+click_url+'" class="thumbnail"><img alt="" src="'+src+'" height="140"></a></p><div class="detail"> <h3> <a title="" href="'+click_url+'">'+headline+'<img src="'+view_url+'" /></a></h3><span class="sponsored">Sponsored</span></div>';
+			
+			$("#" + element_id).html(html_adver);
+					
+		}
+	}
+	
+	switch (ads4_type) {
+		case 'homepage' :
+		
+			var adz_homepage = [];
+			var arr_ad_zone_homepage = [2763, 2764, 2765, 2766, 2767];
+			var count_adz = 0;
+			var i;
+			for (i in arr_ad_zone_homepage) {
+				zone_id = arr_ad_zone_homepage[i];    
+				if (typeof OA_output[zone_id] === 'undefined') continue;
+				OA_show(zone_id);
+				if (typeof adz[zone_id] === 'undefined') continue;	
+				adz_homepage.push(zone_id);
+				count_adz++;
+			}
+			count_adz = adz_homepage.length;
+			if (count_adz >= 2) {
+				shuffle(adz_homepage);
+				OA_show_ads4(adz_homepage[0], 'adver1');
+				OA_show_ads4(adz_homepage[1], 'adver2');
+			} else if (count_adz == 1) {
+				OA_show_ads4(adz_homepage[0], 'adver1');	
+				$('#adver2').remove();
+			} else {	
+				$('#adver1').remove();
+				$('#adver2').remove();
+			}
+			
+		break;
+		
+		case 'section' :	
+		case 'sub_section' :		
+			switch (ads4_section) {
+				case 'business' :
+					//OA_show_ads4(2768, ads4_type, ads4_section);
+					OA_show_ads4(2768, 'adver1');
+				break;
+				case 'tech' :
+					// OA_show_ads4(2766, ads4_type, ads4_section);					
+				break;
+				case 'auto' :
+					OA_show_ads4(2771, 'adver1');
+				break;
+				case 'lifestyle' :
+					OA_show_ads4(2769, 'adver1');					
+				break;
+				case 'travel' :					
+					OA_show_ads4(2770, 'adver1');	
+				break;
+				case 'learning' :
+					OA_show_ads4(2772, 'adver1');	
+				break;
+				default :				
+				break;
+			}
+		break;
+		
+		default:
+		break;
+	}
+	
+
+	function shuffle(array) {
+		var currentIndex = array.length,
+		temporaryValue, randomIndex;
+		/* While there remain elements to shuffle... */
+		while (0 !== currentIndex) {
+			/* Pick a remaining element... */
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			/* And swap it with the current element. */
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+		return array;
+	}
+	
+	
+	(function($, window, document) {
+		
+	}(window.jQuery, window, document));
+	
+	</script>	
+	<script type="text/javascript" src="https://m.bangkokpost.com/resources/js/gdpr_mdot.js?v=3"></script>	
+</body>
+</html>
