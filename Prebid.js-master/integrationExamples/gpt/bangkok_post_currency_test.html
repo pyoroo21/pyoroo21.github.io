@@ -130,28 +130,7 @@
               });
           });
           
-                    pbjs.bidderSettings = {
-                    standard: {
-                        adserverTargeting: [
-                            {
-                                key: "hb_bidder",
-                                val: function (bidResponse) {
-                                    console.log('Bid Response Bidder Name: ' + bidResponse.bidderCode);
-                                    return bidResponse.bidderCode;
-                                }
-                            }, {
-                                key: "hb_adid",
-                                val: function (bidResponse) {
-                                    console.log('Bid Response Ad ID: ' + bidResponse.adId);
-                                    return bidResponse.adId;
-                                }
-                            }, {
-                                key: "hb_pb",
-                                val: function (bidResponse) {
-                                    console.log('Bid Response Bid Price: ' + bidResponse.pbMg);
-                                    return bidResponse.pbMg;
-                                }
-                            }]}};
+
           function sendAdserverRequest() {
               if (pbjs.adserverRequestSent) return;
               pbjs.adserverRequestSent = true;
