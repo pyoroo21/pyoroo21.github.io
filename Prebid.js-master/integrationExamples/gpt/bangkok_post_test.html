@@ -62,10 +62,7 @@
                 pbjs.addAdUnits(adUnits);
                 pbjs.setConfig({
                 	priceGranularity: customConfigObject
-                    currency: {
-                       "adServerCurrency": "THB",
-                       "granularityMultiplier": 32
-                });
+                    );
                 pbjs.requestBids({
                     bidsBackHandler: initAdserver
                 });
