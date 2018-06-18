@@ -200,11 +200,7 @@
 					return bidCpm / 0.031; //please make a config var eg. 0.031
 				}
 			},
-			audienceNetwork: {
-				bidCpmAdjustment: function(bidCpm) {
-					return bidCpm / 0.031; //please make a config var eg. 0.031
-				}
-			}
+
 		};
 
 		const customConfigObject = {
@@ -231,7 +227,11 @@
 
 		pbjs.que.push(function() {
 			pbjs.setConfig({
-				priceGranularity: customConfigObject
+				priceGranularity: customConfigObject,
+				"currency": {
+                        		"adServerCurrency": "THB",
+                        		"granularityMultiplier": 32
+                     		}
 			})
 		})
 		
