@@ -15,27 +15,7 @@
 
       <script>
           var PREBID_TIMEOUT = 2000;
-           const customConfigObject = {
-                "buckets": [{
-                           "precision": 2,
-                           "min": 0,
-                           "max": 3.125,
-                           "increment": 0.015625
-                     },
-                     {
-                           "precision": 2,
-                           "min": 3.125,
-                           "max": 9.375,
-                           "increment": 0.03125
-                     },
-                     {
-                           "precision": 2,
-                           "min": 9.375,
-                           "max": 21.875,
-                           "increment": 0.625
-                     }
-                ]
-           };
+           
 
           var adUnits = [{
               code: 'div-gpt-ad-1',
@@ -102,6 +82,27 @@
         
     <script type="text/javascript" src="prebid.js" async></script>
      <script>
+         const customConfigObject = {
+                "buckets": [{
+                           "precision": 2,
+                           "min": 0,
+                           "max": 3.125,
+                           "increment": 0.015625
+                     },
+                     {
+                           "precision": 2,
+                           "min": 3.125,
+                           "max": 9.375,
+                           "increment": 0.03125
+                     },
+                     {
+                           "precision": 2,
+                           "min": 9.375,
+                           "max": 21.875,
+                           "increment": 0.625
+                     }
+                ]
+           };
           var googletag = googletag || {};
           googletag.cmd = googletag.cmd || [];
           pbjs.bidderSettings = {
