@@ -26,32 +26,27 @@
             }];
 
             const customConfigObject = {
-                "buckets": [
-                	{
-                        "precision": 2, //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
-                        "min": 0,
-                        "max": 5,
-                        "increment": 0.01
-                    },
-                    {
-                        "precision": 2,
-                        "min": 5,
-                        "max": 8,
-                        "increment": 0.05
-                    },
-                    {
-                        "precision": 2,
-                        "min": 8,
-                        "max": 20,
-                        "increment": 0.5
-                    },
-                    {
-                        "precision": 2,
-                        "min": 21,
-                        "max": 99,
-                        "increment": 1.00
-                    }
+                
+                "buckets": [{
+                           "precision": 2,
+                           "min": 0,
+                           "max": 3.125,
+                           "increment": 0.015625
+                     },
+                     {
+                           "precision": 2,
+                           "min": 3.125,
+                           "max": 9.375,
+                           "increment": 0.03125
+                     },
+                     {
+                           "precision": 2,
+                           "min": 9.375,
+                           "max": 21.875,
+                           "increment": 0.625
+                     }
                 ]
+
             };
 
             var googletag = googletag || {};
@@ -67,6 +62,9 @@
                 pbjs.addAdUnits(adUnits);
                 pbjs.setConfig({
                 	priceGranularity: customConfigObject
+                    currency: {
+                       "adServerCurrency": "THB",
+                       "granularityMultiplier": 32
                 });
                 pbjs.requestBids({
                     bidsBackHandler: initAdserver
