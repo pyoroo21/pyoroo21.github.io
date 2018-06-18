@@ -83,23 +83,23 @@
     <script type="text/javascript" src="prebid.js" async></script>
      <script>
          const customConfigObject = {
-                'buckets': [{
-                           'precision': 2,
-                           'min': 0,
-                           'max': 3,
-                           'increment': 0.015625
+                "buckets": [{
+                           "precision": 2,
+                           "min": 0,
+                           "max": 3,
+                           "increment": 0.015625
                      },
                      {
-                           'precision': 2,
-                           'min': 3,
-                           'max': 9,
-                           'increment': 0.03125
+                           "precision": 2,
+                           "min": 3,
+                           "max": 9,
+                           "increment": 0.03125
                      },
                      {
-                           'precision': 2,
-                           'min': 9,
-                           'max': 21,
-                           'increment': 0.625
+                           "precision": 2,
+                           "min": 9,
+                           "max": 21,
+                           "increment": 0.625
                      }
                 ]
            };
@@ -131,7 +131,7 @@
               pbjs.addAdUnits(adUnits);
          
               pbjs.setConfig({
-                    'priceGranularity': customConfigObject,
+                    "priceGranularity": customConfigObject,
                      "currency": {
                         "adServerCurrency": "THB",
                         "granularityMultiplier": 32
