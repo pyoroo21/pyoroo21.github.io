@@ -188,13 +188,11 @@
 					  {
 						key: "hb_pb",
 						val: function(bidResponse) {
-						  return bidResponse.pbMg  ;
+						  return (bidResponse.pbMg/0.031).toFixed(2)  ;
 						}
 					  },
 				  ],
-				  bidCpmAdjustment: function(bidCpm) {
-					return bidCpm / 0.031.toFixed(2);; //please make a config var eg. 0.031
-				}
+
 
 			  },
 			appnexus: {
