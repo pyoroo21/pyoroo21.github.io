@@ -102,6 +102,7 @@
                             , {
                                 key: "hb_pb",
                                 val: function (bidResponse) {
+					console.log('True Bid Response Bid Price: ' + bidResponse.pbMg);
 					var calculated_hb_pb;
                                     
 					if (bidResponse.pbMg >= 0 && bidResponse.pbMg <= 3.12){
