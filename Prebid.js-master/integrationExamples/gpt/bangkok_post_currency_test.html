@@ -2,8 +2,6 @@
 <html>
     <head>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            //<script type="text/javascript" src="prebid.js" async></script>
-        <script async src="//acdn.adnxs.com/prebid/not-for-prod/1/prebid.js"></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-1356834699257029",
@@ -17,8 +15,6 @@
 
       <script>
           var PREBID_TIMEOUT = 2000;
-           
-
           var adUnits = [{
               code: 'div-gpt-ad-1',
               sizes: [[300, 250]],
@@ -77,50 +73,16 @@
               }
             }]
           }];
-           const customConfigObject = {
-                "buckets": [{
-                           "precision": 2,
-                           "min": 0,
-                           "max": 300,
-                           "increment": 0.20//0.015625
-                     },
-                     {
-                           "precision": 2,
-                           "min": 3,
-                           "max": 9,
-                           "increment": 0.03125
-                     },
-                     {
-                           "precision": 2,
-                           "min": 9,
-                           "max": 21,
-                           "increment": 0.625
-                     }
-                ]
-           };
-
-
-        
-        
-
-
-        
-          var googletag = googletag || {};
-          googletag.cmd = googletag.cmd || [];
-          googletag.cmd.push(function() {
-                googletag.pubads().disableInitialLoad();
-            });
-          
-
-          
-          
-
           var pbjs = pbjs || {};
           pbjs.que = pbjs.que || [];
-
-          pbjs.que.push(function() {
-              pbjs.addAdUnits(adUnits);
-              pbjs.bidderSettings = {
+        </script>
+        
+        
+    <script type="text/javascript" src="prebid.js" async></script>
+     <script>
+          var googletag = googletag || {};
+          googletag.cmd = googletag.cmd || [];
+          pbjs.bidderSettings = {
                     standard: {
                         adserverTargeting: [
                             {
@@ -142,17 +104,20 @@
                                     return bidResponse.pbMg;
                                 }
                             }]}};
+          pbjs.que.push(function() {
+              pbjs.addAdUnits(adUnits);
          
               pbjs.setConfig({
-                    priceGranularity: customConfigObject
-
+                     "priceGranularity": "medium",
+                     "currency": {
+                        "adServerCurrency": "PHP",
+                        "granularityMultiplier": 52
+                     }
                   });
               pbjs.requestBids({
                   bidsBackHandler: sendAdserverRequest
               });
           });
-          
-
           function sendAdserverRequest() {
               if (pbjs.adserverRequestSent) return;
               pbjs.adserverRequestSent = true;
