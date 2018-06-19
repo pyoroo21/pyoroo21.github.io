@@ -125,6 +125,7 @@
                                 key: "hb_pb2",
                                 val: function (bidResponse) {
                                     console.log('Bid Response Bid Price: ' + bidResponse.pbMg);
+
                                     return bidResponse.pbMg;
                                 }
                             }
@@ -134,10 +135,10 @@
          
               pbjs.setConfig({
                      "priceGranularity": customConfigObject,
-                     "currency": {
+                     /*"currency": {
                         "adServerCurrency": "THB",
-                        "granularityMultiplier": 50
-                     }
+                        "granularityMultiplier": 32
+                     }*/
                   });
               pbjs.requestBids({
                   bidsBackHandler: sendAdserverRequest
