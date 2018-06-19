@@ -97,13 +97,15 @@
                                     console.log('Bid Response Ad ID: ' + bidResponse.adId);
                                     return bidResponse.adId;
                                 }
-                            }, {
+                            }
+                            /*, {
                                 key: "hb_pb",
                                 val: function (bidResponse) {
                                     console.log('Bid Response Bid Price: ' + bidResponse.pbMg);
                                     return bidResponse.pbMg;
                                 }
-                            }]}};
+                            }*/
+                        ]}};
           pbjs.que.push(function() {
               pbjs.addAdUnits(adUnits);
          
