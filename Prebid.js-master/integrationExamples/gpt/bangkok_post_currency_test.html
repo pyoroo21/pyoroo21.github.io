@@ -17,24 +17,25 @@
           var PREBID_TIMEOUT = 2000;
           const customConfigObject = {
 			"buckets": [{
-					"precision": 2,
-					"min": 0,
-					"max": 100,
-					"increment": 0.50
-				},
-				{
-					"precision": 2,
-					"min": 100,
-					"max": 300,
-					"increment": 1.00
-				},
-				{
-					"precision": 2,
-					"min": 300,
-					"max": 700,
-					"increment": 20.0
-				}
-			]
+                           "precision": 2,
+                           "min": 0,
+                           "max": 3.125,
+                           "increment": 0.015625
+                     },
+                     {
+                           "precision": 2,
+                           "min": 3.125,
+                           "max": 9.375,
+                           "increment": 0.03125
+                     },
+                     {
+                           "precision": 2,
+                           "min": 9.375,
+                           "max": 21.875,
+                           "increment": 0.625
+                     }
+                ]
+
 		};
 
           var adUnits = [{
