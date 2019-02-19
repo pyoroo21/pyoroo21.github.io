@@ -1,52 +1,108 @@
-<div style="display:none; position: relative;">
-  <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async></script>
-  <script type="text/javascript">
-    window.ADNW = window.ADNW || {};
-    window.ADNW.v60 = window.ADNW.v60 || {};
-    window.ADNW.v60.slots = window.ADNW.v60.slots || [];
-    window.ADNW.v60.slots.push({
-      rootElement: document.currentScript.parentElement,
-      placementid: '2198625087075793_2279640722307562',
-      format: 'rewarded_video',
-      testmode: false,
-      onAdLoaded: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad loaded');
-        rootElement.style.display = 'block';
-      },
-      onAdError: function(errorCode, errorMessage) {
-        console.log('Audience Network [[PLACEMENT_ID]] error (' + errorCode + ') ' + errorMessage);
-        [PASSBACK_CODE]
-      },
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Simple Blog Layout</title>
+        <style>
+                /* Basic Blog Styles */
+                * { padding: 0; margin: 0; text-align: left; }
+                body { background: #253540; color: #FFF; font-family: sans-serif; font-size: 21px; text-align: center; }
+                footer { font-size: 14px; margin: 53px auto 100px; max-width: 768px; width: 80%; }
+                h1 { font-size: 43px; font-weight: 300; margin-bottom: 53px; }
+                header { border-bottom: 1px solid #394956; font-size: 23px; font-weight: 300; margin-bottom: 53px; padding: 53px; text-transform: uppercase; }
+                p { color: #93A1AF; line-height: 33px; margin-bottom: 43px; }
+                section { margin: 0 auto; max-width: 768px; width: 80%; }
+                /* Gating Fade Out Styles */
+                .gate { display: none; }
+                .gated { height: 1000px; overflow-y: hidden; position: relative; }
+                .gated .gate { background: linear-gradient( rgba(37,53,64,0), rgba(37,53,64,1) ); display: block; height: 1000px; left: 0; position: absolute; right: 0; top: 0; z-index: 2; }
+                /* Gating CTA */
+                .gate_cta { background: #F9FAFA; border-radius: 6px; margin: 0 auto; max-width: 440px; padding: 43px 33px; position: relative; top: 50%; text-align: center; transform: translateY(-50%); width: 100% }
+                .gate_cta button { background: #3197D6; border: none; border-radius: 4px; color: #FFF; display: block; font-size: 18px; margin: 0 auto 18px; padding: 13px 33px; }
+                .gate_cta .gate-skip { color: #93A1AF; display: inline-block; font-size: 12px; font-weight: 300; text-decoration: none; }
+                .gate_cta .gate-skip:hover { text-decoration: underline; }
+                .gate_cta h3 { color: #253540; font-size: 26px; font-weight: 600; margin-bottom: 0; text-align: center; }
+                .gate_cta input { border: 1px solid #D6DDE3; border-radius: 2px; font-size: 18px; margin-bottom: 23px; padding: 13px; width: 100%; }
+                .gate_cta p { font-size: 16px; margin-bottom: 23px; text-align: center; }
+        </style>
+</head>
+<body>
+        <header>Blog Example</header>
+        <section>
+                <div class="content gated">
+                        <div class="gate">
+                                <div class="gate_cta">
+                                        <h3>Don't Miss a Single Post 🤟</h3>
+                                        <p>Join over 32,000 other weekly newsletter subscribers.</p>
+                                        <form class="newsletter-signup">
+                                                <input type="email" placeholder="Enter your email" required />
+                                                <button>Subscribe</button>
+                                        </form>
+                                        <a href="#" class="gate-skip">No thanks</a>
+                                </div>
+                        </div>
+                        <h1>Blog Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis orci enim, id mollis neque lacinia id. Sed ornare lacinia lacus ac aliquet. Morbi vulputate diam nec maximus sollicitudin. Quisque lacus enim, feugiat eget varius eu, auctor a nibh. Morbi laoreet velit id erat rhoncus, ullamcorper vestibulum sapien eleifend. Nulla facilisi. Vestibulum mollis ac augue a iaculis. Duis convallis urna quis neque finibus, sed blandit odio interdum. Morbi a magna eu nisl vulputate vulputate.
 
-      // Called when all the media for an ad is loaded. Useful for preloading ads
-      // in a hidden div, and only showing them when the ad is loaded.
-      // Intended for use with gated content and gaming - when getting a no fill
-      // should result in other behaviour, and the ad should only be shown when all
-      // ad elements are loaded.
-      // onDisplayAd should be called when the publisher is going to display the ad.
-      onMediaLoaded: function(rootElement, onDisplayAd) {
-        console.log('Audience Network [[PLACEMENT_ID]] media loaded');
-        [PASSBACK_CODE]
-      },
+Cras sed arcu orci. Maecenas dictum a arcu tristique feugiat. Aenean ultricies sem sit amet bibendum maximus. Aenean bibendum purus in magna tristique feugiat. Pellentesque id congue est. Morbi hendrerit convallis sapien egestas consectetur. Nam ac dignissim nisl. Integer commodo pretium facilisis. Vivamus euismod enim vitae elit mattis bibendum. Vivamus at faucibus turpis, non facilisis sapien. Fusce bibendum nulla varius auctor consequat. Phasellus pretium enim id nibh condimentum egestas. Suspendisse et tellus sed sem iaculis imperdiet. Vivamus et arcu vulputate, posuere purus a, blandit magna. Aliquam commodo neque id placerat vehicula. Donec suscipit placerat consequat.
 
-      // The following methods will only be called if the ad is a rewared placement:
+Quisque ut quam id eros volutpat tincidunt. In vitae urna non enim viverra porttitor. Nunc euismod, ipsum sed sollicitudin lacinia, augue mauris gravida felis, vitae hendrerit sem ligula ut lectus. Vestibulum finibus non dui quis ullamcorper. Nunc vel justo quam. Aenean ac viverra eros, in varius sem. Duis accumsan arcu sit amet purus sollicitudin, at consequat lacus cursus. Pellentesque ex erat, porta eget tortor eu, hendrerit ullamcorper ex. Duis quis ornare risus. Cras tincidunt varius nisi, eu semper lacus convallis at. Integer vitae vestibulum neque, maximus pulvinar tellus. Sed et mauris turpis.
 
-      // called when the user has done the necessary action to get a reward.
-      // For rewarded video, this is when the end card becomes visible.
-      onRewardCompleted: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad rewarded');
-        [PASSBACK_CODE]
-      },
+Mauris rhoncus diam a sapien aliquam porta. Aliquam condimentum ullamcorper ultricies. Vivamus aliquet ultricies volutpat. Nam tincidunt, lorem a lacinia lacinia, arcu dolor eleifend dolor, a efficitur leo leo in ligula. Integer quam nisi, varius ultricies facilisis efficitur, sodales eu arcu. Aliquam in iaculis sem, quis rhoncus urna. Pellentesque consectetur leo est, quis elementum augue lobortis in. Phasellus laoreet mi id diam elementum dapibus.
 
-      // called when e.g. the user presses the X button on Rewarded Video.
-      // Publisher should hide the element the Ad is shown within
-      // This can be called without onRewardCompleted being called when
-      // e.g. the user X-outs the ad.
-      onAdClosed: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad closed');
-        [PASSBACK_CODE]
-      },
-
-    });
-  </script>
-</div>
+Nullam in diam vitae est congue iaculis. Sed pretium augue eu euismod blandit. Nam arcu neque, gravida nec fringilla id, gravida eget enim. Proin venenatis, odio id dictum vestibulum, enim orci pulvinar eros, ut consectetur eros dolor non leo. Curabitur vulputate, nibh at ultrices ultricies, ipsum sem viverra tortor, vitae interdum metus nisi eget ante. Sed aliquet sagittis justo, sodales aliquet dui euismod ac. Integer vitae purus eu nibh imperdiet bibendum nec quis neque. Suspendisse ut leo purus. Proin quis ornare risus. Nulla auctor mauris eget eros mattis consequat. Phasellus sit amet mattis leo. Nulla semper, nulla vel vehicula gravida, erat ipsum ornare erat, vel volutpat tortor nisl sed nisi. Integer a magna pharetra lectus facilisis tempor..</p>
+                </div>
+        </section>
+        <footer>© <span class="year"></span> All rights reserved.</footer>
+        <script>
+                (function(){
+                        updateCopyrightYear();
+                        gateCheck();
+                        gateEvents();
+                        // -------------------------------------------------------
+                        // FUNCTIONS
+                        // -------------------------------------------------------
+                        function gateCheck() {
+                                // Gate is shown by default. Let's check if it should be removed
+                                var hideGate = localStorage.getItem('gate-hide') || false;
+                                if (hideGate) {
+                                        gateHide();
+                                }
+                        }
+                        function gateEvents() {
+                                // Dismiss gate when anyone clicks "No thanks"
+                                document.querySelector('.gate-skip').addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        // Save preference to localstorage
+                                        gatePrevent();
+                                        // Hide the gate immediately
+                                        gateHide();
+                                });
+                                // Handle form submission
+                                document.querySelector('.newsletter-signup').addEventListener('submit', function(e) {
+                                        e.preventDefault();
+                                        // Do something with the form data here...
+                                        // Then...
+                                        
+                                        // Save preference to localstorage
+                                        gatePrevent();
+                                        // Hide the gate immediately
+                                        gateHide();
+                                });
+                        }
+                        function gateHide() {
+                                // Remove the .gated class from .content which hides the entire .gate div
+                                document.querySelector('.content').classList.remove('gated');
+                        }
+                        function gatePrevent() {
+                                // Prevent the gate from being shown from this point forward
+                                localStorage.setItem('gate-hide', true);
+                        }
+                        function updateCopyrightYear() {
+                                // Updating the copyright year with JS so that it's always current
+                                document.querySelector('.year').innerHTML = new Date().getFullYear();
+                        }
+                })();
+        </script>
+</body>
+</html>
