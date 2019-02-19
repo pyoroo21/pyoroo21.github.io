@@ -70,15 +70,11 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                         gateHide();
                                 }
                         }
-                        function gateEvents() {
-                                // Dismiss gate when anyone clicks "No thanks"
-                                document.querySelector('.gate-skip').addEventListener('click', function(e) {
-                                        e.preventDefault();
-                                        // Save preference to localstorage
-                                        gatePrevent();
-                                        // Hide the gate immediately
-                                        gateHide();
-                                        window.ADNW = window.ADNW || {};
+                        function gateCheck() {
+                                <div style="display:none; position: relative;">
+  <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async></script>
+  <script type="text/javascript">
+    window.ADNW = window.ADNW || {};
     window.ADNW.v60 = window.ADNW.v60 || {};
     window.ADNW.v60.slots = window.ADNW.v60.slots || [];
     window.ADNW.v60.slots.push({
@@ -120,6 +116,18 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
         [PASSBACK_CODE]
       },
     });
+  </script>
+</div>
+                        }
+                        function gateEvents() {
+                                // Dismiss gate when anyone clicks "No thanks"
+                                document.querySelector('.gate-skip').addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        // Save preference to localstorage
+                                        gatePrevent();
+                                        // Hide the gate immediately
+                                        gateHide();
+                                        
                                 });
                                 // Handle form submission
                                 document.querySelector('.newsletter-signup').addEventListener('submit', function(e) {
