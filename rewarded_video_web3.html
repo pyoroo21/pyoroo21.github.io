@@ -72,55 +72,32 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                         gateHide();
                                 }
                         }
-                        function startVideo() {
-                                <div style="display:none; position: relative;">
-  <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async></script>
-  <script type="text/javascript">
-    window.ADNW = window.ADNW || {};
-    window.ADNW.v60 = window.ADNW.v60 || {};
-    window.ADNW.v60.slots = window.ADNW.v60.slots || [];
-    window.ADNW.v60.slots.push({
-      rootElement: document.currentScript.parentElement,
-      placementid: '2198625087075793_2279640722307562',
-      format: 'rewarded_video',
-      testmode: false,
-      onAdLoaded: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad loaded');
-        rootElement.style.display = 'block';
-      },
-      onAdError: function(errorCode, errorMessage) {
-        console.log('Audience Network [[PLACEMENT_ID]] error (' + errorCode + ') ' + errorMessage);
-        [PASSBACK_CODE]
-      },
-      // Called when all the media for an ad is loaded. Useful for preloading ads
-      // in a hidden div, and only showing them when the ad is loaded.
-      // Intended for use with gated content and gaming - when getting a no fill
-      // should result in other behaviour, and the ad should only be shown when all
-      // ad elements are loaded.
-      // onDisplayAd should be called when the publisher is going to display the ad.
-      onMediaLoaded: function(rootElement, onDisplayAd) {
-        console.log('Audience Network [[PLACEMENT_ID]] media loaded');
-        [PASSBACK_CODE]
-      },
-      // The following methods will only be called if the ad is a rewared placement:
-      // called when the user has done the necessary action to get a reward.
-      // For rewarded video, this is when the end card becomes visible.
-      onRewardCompleted: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad rewarded');
-        [PASSBACK_CODE]
-      },
-      // called when e.g. the user presses the X button on Rewarded Video.
-      // Publisher should hide the element the Ad is shown within
-      // This can be called without onRewardCompleted being called when
-      // e.g. the user X-outs the ad.
-      onAdClosed: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad closed');
-        [PASSBACK_CODE]
-      },
-    });
-  </script>
-</div>
-                        }
+                          function startVideo() {
+                //removeAllAds();
+ 
+                var adSpace = document.getElementById('elementID');
+                var div = document.createElement('div');
+                adSpace.appendChild(div);
+ 
+                window.ADNW.v60.slots.push({
+                  rootElement: div,
+                  placementid: '2198625087075793_2279640722307562',
+                  format: 'rewarded_video',
+                  testmode: false,
+                  onAdLoaded: function(element) {
+                    console.log('Audience Network [' + placement_id + '] ad loaded');
+                    element.style.display = 'block';
+                  },
+                  onAdError: function(errorCode, errorMessage) {
+                    console.log('Audience Network [' + placement_id + '] error (' + errorCode + ') ' + errorMessage);
+                    //If the ad is No Filled then this callback will call the below function to continue filling
+
+                  },
+ 
+
+ 
+                  });
+              }
                         function gateEvents() {
                                 // Dismiss gate when anyone clicks "No thanks"
                                 document.querySelector('.gate-skip').addEventListener('click', function(e) {
