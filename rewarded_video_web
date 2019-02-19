@@ -6,8 +6,8 @@
     window.ADNW.v60.slots = window.ADNW.v60.slots || [];
     window.ADNW.v60.slots.push({
       rootElement: document.currentScript.parentElement,
-      placementid: '[PLACEMENT_ID]',
-      format: '[DISPLAY_FORMAT]',
+      placementid: '2198625087075793_2279640722307562',
+      format: 'FAN_REWARDED_VIDEO',
       testmode: false,
       onAdLoaded: function(rootElement) {
         console.log('Audience Network [[PLACEMENT_ID]] ad loaded');
