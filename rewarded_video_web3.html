@@ -1,9 +1,15 @@
 <html>
 <head>
         <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async></script>
+        <script>
+        window.ADNW = window.ADNW || {};
+        window.ADNW.v60 = window.ADNW.v60 || {};
+        window.ADNW.v60.slots = window.ADNW.v60.slots || [];
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <p id="elementID"></p>
+        
+        
         <title>Simple Blog Layout</title>
         <style>
                 /* Basic Blog Styles */
@@ -55,6 +61,7 @@ Sed laoreet ipsum enim, sed molestie risus pellentesque dapibus. Sed ac pretium 
 
 Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean hendrerit non odio et scelerisque. Cras posuere nisl in nulla sodales iaculis. Cras malesuada tincidunt ligula. Curabitur viverra odio porttitor pulvinar euismod. Vivamus ultrices erat ut massa feugiat, non consequat mi dignissim. Vestibulum vehicula eget urna vel maximus. Aenean et risus enim. Quisque vel nunc eu arcu luctus pulvinar nec eu felis. Pellentesque non facilisis urna. In tristique dignissim suscipit. Mauris sed rutrum orci, sed pellentesque justo. Vestibulum quam arcu, mattis in enim id, tincidunt tincidunt nibh.</p>
                 </div>
+                <div id="adSpace" class="adSpace"></div>
         </section>
         <footer>© <span class="year"></span> All rights reserved.</footer>
         <script>
@@ -73,34 +80,72 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                         //gateHide();
                                 }
                         }
-                          function startVideo() {
-                //removeAllAds();
+                        
+                       function removeAllAds() {
+                                var adSpace = document.getElementById('adSpace');
+                                while (adSpace.firstChild) {
+                                adSpace.removeChild(adSpace.firstChild);
+                                }
+                       adSpace.classList.remove('rv_overlay');
+                       }
+                        function preloadAd() {
+                console.log('requesting new ad...');
+                startVideo('rewarded_video', '2198625087075793_2279640722307562');
+              }
+                        window.showVideo = function() {}
+
+                          function startVideo(format, placement_id) {
+                removeAllAds();
  
-                var adSpace = document.getElementById('elementID');
+                var adSpace = document.getElementById('adSpace');
                 var div = document.createElement('div');
                 adSpace.appendChild(div);
-                                  window.ADNW = window.ADNW || {};
-    window.ADNW.v60 = window.ADNW.v60 || {};
-    window.ADNW.v60.slots = window.ADNW.v60.slots || [];
+
  
                 window.ADNW.v60.slots.push({
                   rootElement: div,
-                  placementid: '2198625087075793_2279640722307562',
-                  format: 'rewarded_video',
+                  placementid: 'placement_id',
+                  format: 'fomrmat',
                   testmode: false,
                   onAdLoaded: function(element) {
-                    console.log('Audience Network [[PLACEMENT_ID]] ad loaded');
+                    console.log('Audience Network [' + placement_id + ']  ad loaded');
                     element.style.display = 'block';
                   },
                   onAdError: function(errorCode, errorMessage) {
-        console.log('Audience Network [[PLACEMENT_ID]] error (' + errorCode + ') ' + errorMessage);
-        [PASSBACK_CODE]
+        console.log('Audience Network [' + placement_id + '] error (' + errorCode + ') ' + errorMessage);
+        preloadAd();
 
                   },
- 
+                    onMediaLoaded: function(rootElement, playVideo) {
+                    console.log('media loaded');
+                    document.querySelector('.cta').onclick = showAd;
+                    document.querySelector('.cta').classList.remove('disabled');
+
+                    window.showVideo = playVideo;
+                  },
+                /* For rewarded content */
+                  onAdClosed: function() {
+                    console.log('ad closed');
+                    removeAllAds();
+
+                    document.body.style.overflow = 'auto';
+                  },
+                        onRewardCompleted: function() {
+                    document.querySelector('.wrapper').classList.add('rewarded');
+                    console.log('reward completed!');
+                  }
 
  
                   });
+              }
+                        
+                                      function showAd() {
+                var adSpace = document.getElementById('adSpace');
+                adSpace.classList.add('rv_overlay');
+
+                window.showVideo();
+
+                document.body.style.overflow = 'hidden';
               }
                         function gateEvents() {
                                 // Dismiss gate when anyone clicks "No thanks"
