@@ -89,12 +89,12 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                   format: 'rewarded_video',
                   testmode: false,
                   onAdLoaded: function(element) {
-                    console.log('Audience Network [' + placement_id + '] ad loaded');
+                    console.log('Audience Network [[PLACEMENT_ID]] ad loaded');
                     element.style.display = 'block';
                   },
                   onAdError: function(errorCode, errorMessage) {
-                    console.log('Audience Network [' + placement_id + '] error (' + errorCode + ') ' + errorMessage);
-                    //If the ad is No Filled then this callback will call the below function to continue filling
+        console.log('Audience Network [[PLACEMENT_ID]] error (' + errorCode + ') ' + errorMessage);
+        [PASSBACK_CODE]
 
                   },
  
