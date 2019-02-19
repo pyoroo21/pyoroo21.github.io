@@ -96,50 +96,7 @@ Fusce fringilla erat nulla, a ullamcorper ante luctus at. Aenean quis interdum l
                         function gateHide() {
                                 // Remove the .gated class from .content which hides the entire .gate div
                                 document.querySelector('.content').classList.remove('gated');
-                                <script type="text/javascript">
-    window.ADNW = window.ADNW || {};
-    window.ADNW.v60 = window.ADNW.v60 || {};
-    window.ADNW.v60.slots = window.ADNW.v60.slots || [];
-    window.ADNW.v60.slots.push({
-      rootElement: document.currentScript.parentElement,
-      placementid: '2198625087075793_2279640722307562',
-      format: 'rewarded_video',
-      testmode: false,
-      onAdLoaded: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad loaded');
-        rootElement.style.display = 'block';
-      },
-      onAdError: function(errorCode, errorMessage) {
-        console.log('Audience Network [[PLACEMENT_ID]] error (' + errorCode + ') ' + errorMessage);
-        [PASSBACK_CODE]
-      },
-      // Called when all the media for an ad is loaded. Useful for preloading ads
-      // in a hidden div, and only showing them when the ad is loaded.
-      // Intended for use with gated content and gaming - when getting a no fill
-      // should result in other behaviour, and the ad should only be shown when all
-      // ad elements are loaded.
-      // onDisplayAd should be called when the publisher is going to display the ad.
-      onMediaLoaded: function(rootElement, onDisplayAd) {
-        console.log('Audience Network [[PLACEMENT_ID]] media loaded');
-        [PASSBACK_CODE]
-      },
-      // The following methods will only be called if the ad is a rewared placement:
-      // called when the user has done the necessary action to get a reward.
-      // For rewarded video, this is when the end card becomes visible.
-      onRewardCompleted: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad rewarded');
-        [PASSBACK_CODE]
-      },
-      // called when e.g. the user presses the X button on Rewarded Video.
-      // Publisher should hide the element the Ad is shown within
-      // This can be called without onRewardCompleted being called when
-      // e.g. the user X-outs the ad.
-      onAdClosed: function(rootElement) {
-        console.log('Audience Network [[PLACEMENT_ID]] ad closed');
-        [PASSBACK_CODE]
-      },
-    });
-  </script>
+
                         }
                         function gatePrevent() {
                                 // Prevent the gate from being shown from this point forward
