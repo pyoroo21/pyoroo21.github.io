@@ -109,7 +109,7 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                     console.log('media loaded');
                     document.querySelector('.cta').onclick = showAd;
                     document.querySelector('.cta').classList.remove('disabled');
-                    document.querySelector('.content').classList.remove('gated');
+                    
                     window.showVideo = playVideo;
                   },
                 /* For rewarded content */
@@ -134,6 +134,15 @@ console.log('show ad code');
                 window.showVideo();
                 document.body.style.overflow = 'hidden';
               }
+                
+                                        function gateHide() {
+                                // Remove the .gated class from .content which hides the entire .gate div
+                                 document.querySelector('.gate-skip').addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                          document.querySelector('.content').classList.remove('gated');
+                                
+
+                        }
 
 
 
