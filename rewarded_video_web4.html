@@ -125,9 +125,10 @@
                   },
                     onMediaLoaded: function(rootElement, playVideo) {
                     console.log('media loaded');
-                    document.querySelector('.gate_cta').onclick = showAd();
+                            showAd();
+                    //document.querySelector('.gate_cta').onclick = showAd();
                     console.log('show ad success');
-                    document.querySelector('.gate_cta').classList.remove('disabled');
+                    //document.querySelector('.gate_cta').classList.remove('disabled');
 
                     window.showVideo = playVideo;
                   },
