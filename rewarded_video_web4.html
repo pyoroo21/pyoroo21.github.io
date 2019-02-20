@@ -3,11 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <script src="https://www.facebook.com/audiencenetwork/proxy/fbadnw60-tag.js" async="1"></script>
-        <script>
-        window.ADNW = window.ADNW || {};
-        window.ADNW.v60 = window.ADNW.v60 || {};
-        window.ADNW.v60.slots = window.ADNW.v60.slots || [];
-        </script>
+
 
         
         
@@ -119,17 +115,17 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                 adSpace.classList.remove('rv_overlay');
                        }
                         function preloadAd() {
-                console.log('requesting new ad...');
-                startVideo('rewarded_video', '2198625087075793_2279640722307562');
-              }
+                                console.log('requesting new ad...');
+                                startVideo('rewarded_video', '2198625087075793_2279640722307562');
+                        }
                         window.showVideo = function() {};
 
-                          function startVideo(format, placement_id) {
-                removeAllAds();
+                        function startVideo(format, placement_id) {
+                        removeAllAds();
  
-                var adSpace = document.getElementById('adSpace');
-                var div = document.createElement('div');
-                adSpace.appendChild(div);
+                        var adSpace = document.getElementById('adSpace');
+                        var div = document.createElement('div');
+                        adSpace.appendChild(div);
 
  
                 window.ADNW.v60.slots.push({
@@ -142,8 +138,8 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                     element.style.display = 'block';
                   },
                   onAdError: function(errorCode, errorMessage) {
-        console.log('Audience Network [' + placement_id + '] error (' + errorCode + ') ' + errorMessage);
-        preloadAd();
+                    console.log('Audience Network [' + placement_id + '] error (' + errorCode + ') ' + errorMessage);
+                    preloadAd();
 
                   },
                     onMediaLoaded: function(rootElement, playVideo) {
@@ -170,8 +166,8 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                   });
               }
                         
-                                      function showAd() {
-                                              console.log('show ad code b4');
+                    function showAd() {
+                        console.log('show ad code b4');
                 var adSpace = document.getElementById('adSpace');
                 adSpace.classList.add('rv_overlay');
 console.log('show ad code');
