@@ -102,27 +102,13 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                         gateHide();
                                         
                                 });
-                                // Handle form submission
-                                document.querySelector('.newsletter-signup').addEventListener('submit', function(e) {
-                                        e.preventDefault();
-                                        // Do something with the form data here...
-                                        // Then...
-                                        
-                                        // Save preference to localstorage
-                                        gatePrevent();
-                                        // Hide the gate immediately
-                                        gateHide();
-                                });
                         }
                         function gateHide() {
                                 // Remove the .gated class from .content which hides the entire .gate div
                                 document.querySelector('.content').classList.remove('gated');
                                 startVideo();
                         }
-                        function gatePrevent() {
-                                // Prevent the gate from being shown from this point forward
-                                localStorage.setItem('gate-hide', true);
-                        }
+
                         function updateCopyrightYear() {
                                 // Updating the copyright year with JS so that it's always current
                                 document.querySelector('.year').innerHTML = new Date().getFullYear();
@@ -132,13 +118,13 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                 while (adSpace.firstChild) {
                                 adSpace.removeChild(adSpace.firstChild);
                                 }
-                       adSpace.classList.remove('rv_overlay');
+                                adSpace.classList.remove('rv_overlay');
                        }
                         function preloadAd() {
                 console.log('requesting new ad...');
                 startVideo('rewarded_video', '2198625087075793_2279640722307562');
               }
-                        window.showVideo = function() {}
+                        window.showVideo = function() {};
 
                           function startVideo(format, placement_id) {
                 removeAllAds();
