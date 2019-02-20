@@ -34,7 +34,7 @@
                 .gate_cta p { font-size: 16px; margin-bottom: 23px; text-align: center; }
                 
           .adSpace {
-           
+
             opacity: 0;
           }
           .rv_overlay {
@@ -84,13 +84,19 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
         <script>
                 (function(){
                         updateCopyrightYear();
-                        //gateCheck();
+                        gateCheck();
                         //startVideo();
                         gateEvents();
                         // -------------------------------------------------------
                         // FUNCTIONS
                         // -------------------------------------------------------
-
+                        function gateCheck() {
+                                // Gate is shown by default. Let's check if it should be removed
+                                var hideGate = localStorage.getItem('gate-hide') || false;
+                                if (1) {
+                                        //gateHide();
+                                }
+                        }
                         
                        function removeAllAds() {
                                 var adSpace = document.getElementById('adSpace');
