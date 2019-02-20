@@ -1,0 +1,219 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1" /><style>
+            html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #EDEDED;
+            font-family: Helvetica, Arial, sans-serif;
+          }
+
+          .wrapper {
+            background-color: white;
+          }
+
+          .header {
+            background-color: #BB1919;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+          }
+
+          .actual_image {
+            background-image: url(https://i.imgur.com/hE5ldI2.jpg);
+            height: 250px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+          }
+
+          .chevrons{
+            content: "";
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            border-color: rgba(255,255,255,0.8);
+            display: inline-block;
+            height: 9px;
+            width: 9px;
+            vertical-align: top;
+            transform: rotate(-135deg);
+            margin-right: 10px;
+            position: relative;
+            top: 2px;
+          }
+
+          .article {
+            width: 100%;
+          }
+
+          .image {
+            width: 100%;
+          }
+
+          .caption {
+            width: calc(100% - 20px);
+            font-size: 12px;
+            padding: 10px;
+            background-color: #EDEDED;
+          }
+
+          .pretext, h2, .main_body {
+            padding: 0 20px;
+          }
+
+
+          .pretext {
+            position: relative;
+            line-height: 1.4em;
+          }
+
+          .pretext_overlay {
+            height: 100px;
+            width: calc(100% + 10px);
+            position: absolute;
+            left: -10px;
+            bottom: 0px;
+            background-image: linear-gradient(rgba(237, 237, 237, 0), #EDEDED);
+          }
+
+          .rv_button {
+            font-size: 14px;
+            width: calc(100% - 40px);
+            padding: 20px 20px 5px 20px;
+            background-color: #EDEDED;
+            text-align: center;
+          }
+
+          .cta {
+            margin: 10px 50px;
+            padding: 10px 0px;
+            border-radius: 4px;
+            background-color: #BB1919;
+            color: white;
+            font-weight: bold;
+          }
+
+          .skip_cta{
+            margin: 10px 50px;
+            padding: 10px 0px;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #63D663;
+            font-weight: bold;
+          }
+
+          .main_body {
+            line-height: 1.4em;
+            display: none;
+          }
+
+          .rewarded .rv_button, .rewarded .pretext_overlay {
+            display: none;
+          }
+
+          .rewarded .main_body {
+            display: block;
+          }
+
+          .adSpace {
+            display: none;
+            opacity: 0;
+          }
+
+          .rv_overlay {
+            display: block;
+            z-index: 2147483647;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fadein .5s;
+            animation-fill-mode: forwards;
+          }
+
+          @keyframes fadein {
+              from { opacity: 0; }
+              to   { opacity: 1; }
+          }
+
+          .disabled {
+            color: rgba(255, 255, 255, 0.5);
+          }
+              </style><script src="https://www.facebook.com/audiencenetwork/proxy/fbadnw60-tag.js" async="1"></script><script>
+            window.ADNW = window.ADNW || {};
+            window.ADNW.v60 = window.ADNW.v60 || {};
+            window.ADNW.v60.slots = window.ADNW.v60.slots || [];
+            </script><script>
+              window.ADNW = window.ADNW || {};
+              window.ADNW.v60 = window.ADNW.v60 || {};
+              window.ADNW.v60.slots = window.ADNW.v60.slots || [];
+
+              function removeAllAds() {
+                var adSpace = document.getElementById('adSpace');
+                while (adSpace.firstChild) {
+                    adSpace.removeChild(adSpace.firstChild);
+                }
+                adSpace.classList.remove('rv_overlay');
+              }
+
+              function preloadAd() {
+                console.log('requesting new ad...');
+                createAdPlacement('rewarded_video', '1857062041195879_2273821962853216');
+              }
+
+              window.showVideo = function() {}
+
+              function createAdPlacement(format, placement_id) {
+                removeAllAds();
+
+                var adSpace = document.getElementById('adSpace');
+                var div = document.createElement('div');
+                adSpace.appendChild(div);
+
+                window.ADNW.v60.slots.push({
+                  rootElement: div,
+                  placementid: placement_id,
+                  format: format,
+                  testmode: false,
+                  onAdLoaded: function(element) {
+                    console.log('Audience Network [' + placement_id + '] ad loaded');
+                    element.style.display = 'block';
+                  },
+                  onAdError: function(errorCode, errorMessage) {
+                    console.log('Audience Network [' + placement_id + '] error (' + errorCode + ') ' + errorMessage);
+                    preloadAd();
+                  },
+
+                  onMediaLoaded: function(rootElement, playVideo) {
+                    console.log('media loaded');
+                    document.querySelector('.cta').onclick = showAd;
+                    document.querySelector('.cta').classList.remove('disabled');
+
+                    window.showVideo = playVideo;
+                  },
+
+                  /* For rewarded content */
+                  onAdClosed: function() {
+                    console.log('ad closed');
+                    removeAllAds();
+
+                    document.body.style.overflow = 'auto';
+                  },
+
+                  onRewardCompleted: function() {
+                    document.querySelector('.wrapper').classList.add('rewarded');
+                    console.log('reward completed!');
+                  }
+                });
+              }
+
+              function showAd() {
+                var adSpace = document.getElementById('adSpace');
+                adSpace.classList.add('rv_overlay');
+
+                window.showVideo();
+
+                document.body.style.overflow = 'hidden';
+              }
+
+              setTimeout(preloadAd, 0);
+              </script><body><div class="wrapper"><div class="header"><span class="chevrons"></span>The Day Today</div><div class="article"><div class="image"><div class="actual_image"></div><div class="caption">Fusce cursus velit vitae elit mattis hendrerit.</div></div><h2>Lorem Ipsum Dolor Sit</h2><div class="pretext"><p style="margin-block-end: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><div class="pretext_overlay"></div></div><div class="rv_button">You have read 3 articles today. In order for us to keep producing outstanding content, please watch a sponsored video to read another 3 articles.<div class="cta disabled">Watch Sponsored Video</div></div><div class="main_body"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate mauris id felis ultricies rutrum. Maecenas imperdiet arcu nec tortor interdum pretium. Donec condimentum nisi leo, et aliquam massa finibus at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac nisi pulvinar, aliquet magna sed, rhoncus nibh. Aenean quis suscipit massa. Curabitur volutpat tristique ex. Nam risus quam, dapibus cursus suscipit sit amet, rutrum sed lorem. Donec ornare laoreet massa et pellentesque. Maecenas quis dui urna. Integer at nisi lobortis, rhoncus justo at, vehicula sem.</p><p>Nam vulputate sodales vestibulum. Donec quis odio placerat, pulvinar neque eget, euismod lacus. Curabitur id magna egestas, rhoncus orci sed, feugiat felis. Quisque sollicitudin vitae felis sed maximus. Duis at tincidunt nisi. Integer eu erat id ante rhoncus bibendum. Mauris feugiat elit et lacus posuere feugiat. Phasellus varius dui orci, in cursus lectus venenatis nec. Aenean et lacinia quam. Etiam malesuada tristique nisl, quis finibus purus. Nam malesuada eu augue non tempus. Praesent non dignissim dui. Vivamus imperdiet mattis quam, non rhoncus sapien imperdiet sit amet. Sed dignissim lacus nec lobortis tempus. Curabitur ut dui interdum, placerat lacus sed, eleifend massa. Sed tempus nulla erat.</p><p>Aliquam interdum ante eget tellus venenatis, vel facilisis tortor laoreet. Aliquam pretium erat in nunc vehicula volutpat. Vestibulum pellentesque malesuada justo eget imperdiet. In eget odio vel urna tincidunt mollis non id augue. Sed congue, tellus vel euismod pretium, purus arcu gravida ligula, id dapibus est quam sed risus. Suspendisse in ligula id enim pellentesque commodo sed ut massa. Aenean erat lorem, egestas condimentum dui et, faucibus placerat eros. Suspendisse eleifend justo ipsum.</p><p>Nulla porttitor nisi id mollis sagittis. Aenean ut est ac sem laoreet ornare. Nullam quis condimentum mauris, ut rutrum mi. Integer vestibulum diam diam, sed luctus magna consequat quis. Vestibulum non lectus libero. Phasellus iaculis sem mi, nec commodo ante rhoncus in. Donec ut commodo lectus. Nullam bibendum nisi sit amet lacus placerat facilisis. Sed eget dolor tellus. Nulla odio diam, hendrerit sed suscipit quis, maximus eget purus. Sed mattis mollis velit a venenatis. Aenean a mollis erat, id maximus ipsum. Fusce cursus velit vitae elit mattis hendrerit. Nullam vestibulum dolor sit amet lobortis sodales. Cras tempor cursus felis, vitae lacinia ligula blandit a.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec erat augue. Nulla posuere luctus massa, ac pharetra risus iaculis non. Vestibulum a sapien posuere, viverra lacus eu, aliquet dui. Sed ultrices, velit ut fringilla convallis, odio purus luctus nibh, eu aliquam enim nisl eu nisi. Proin feugiat nulla sed neque rutrum porttitor. Donec velit justo, aliquam porttitor mauris a, eleifend accumsan mauris. Praesent mattis dolor in eros convallis placerat. Suspendisse lectus ex, finibus quis urna sed, rutrum dictum ipsum. Vestibulum malesuada malesuada cursus. Vivamus sem magna, cursus quis aliquam a, pharetra eget ante.</p></div></div></div><div id="adSpace" class="adSpace"></div></body>
