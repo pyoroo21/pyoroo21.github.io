@@ -107,7 +107,11 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                                 // Updating the copyright year with JS so that it's always current
                                 document.querySelector('.year').innerHTML = new Date().getFullYear();
                         }
-                        function removeAllAds() {
+                        
+                })();
+
+
+                function removeAllAds() {
                                 var adSpace = document.getElementById('adSpace');
                                 while (adSpace.firstChild) {
                                 adSpace.removeChild(adSpace.firstChild);
@@ -175,7 +179,6 @@ console.log('show ad code');
 
                 document.body.style.overflow = 'hidden';
               }
-                })();
         </script>
 </body>
 </html>
