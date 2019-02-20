@@ -84,19 +84,13 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
         <script>
                 (function(){
                         updateCopyrightYear();
-                        gateCheck();
+                        //gateCheck();
                         //startVideo();
-                        gateEvents();
+                        gateEvents();})();
                         // -------------------------------------------------------
                         // FUNCTIONS
                         // -------------------------------------------------------
-                        function gateCheck() {
-                                // Gate is shown by default. Let's check if it should be removed
-                                var hideGate = localStorage.getItem('gate-hide') || false;
-                                if (1) {
-                                        //gateHide();
-                                }
-                        }
+
                         
                        function removeAllAds() {
                                 var adSpace = document.getElementById('adSpace');
@@ -193,7 +187,7 @@ console.log('show ad code');
                                 // Updating the copyright year with JS so that it's always current
                                 document.querySelector('.year').innerHTML = new Date().getFullYear();
                         }
-                })();
+                
         </script>
 </body>
 </html>
