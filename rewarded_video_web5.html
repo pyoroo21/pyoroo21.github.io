@@ -228,7 +228,7 @@ Sed finibus ut magna eget finibus. Ut vitae mattis lorem, at cursus mi. Aenean h
                   },
                     onMediaLoaded: function(rootElement, playVideo) {
                     console.log('media loaded');
-                    document.querySelector('.cta').onclick = showAd();
+                    document.querySelector('.cta').onclick = showAd;
                     document.querySelector('.cta').classList.remove('disabled');
                     
                     window.showVideo = playVideo;
