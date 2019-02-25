@@ -4,28 +4,89 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />  
         <title>Simple Blog Layout</title>
         <style>
-                /* Basic Blog Styles */
-                * { padding: 0; margin: 0; text-align: left; }
-                body { background: #253540; color: #FFF; font-family: sans-serif; font-size: 21px; text-align: center; }
-                footer { font-size: 14px; margin: 53px auto 100px; max-width: 768px; width: 80%; }
-                h1 { font-size: 43px; font-weight: 300; margin-bottom: 53px; }
-                header { border-bottom: 1px solid #394956; font-size: 23px; font-weight: 300; margin-bottom: 53px; padding: 53px; text-transform: uppercase; }
-                p { color: #93A1AF; line-height: 33px; margin-bottom: 43px; }
-                section { margin: 0 auto; max-width: 768px; width: 80%; }
-                /* Gating Fade Out Styles */
-                .gate { display: none; }
-                .gated { height: 1000px; overflow-y: hidden; position: relative; }
-                .gated .gate { background: linear-gradient( rgba(37,53,64,0), rgba(37,53,64,1) ); display: block; height: 1000px; left: 0; position: absolute; right: 0; top: 0; z-index: 2; }
-                /* Gating CTA */
-                .gate_cta { background: #F9FAFA; border-radius: 6px; margin: 0 auto; max-width: 440px; padding: 43px 33px; position: relative; top: 50%; text-align: center; transform: translateY(-50%); width: 100% }
-                .gate_cta button { background: #3197D6; border: none; border-radius: 4px; color: #FFF; display: block; font-size: 18px; margin: 0 auto 18px; padding: 13px 33px; }
-                .gate_cta .gate-skip { color: #93A1AF; display: inline-block; font-size: 12px; font-weight: 300; text-decoration: none; }
-                .gate_cta .gate-skip:hover { text-decoration: underline; }
-                .gate_cta h3 { color: #253540; font-size: 26px; font-weight: 600; margin-bottom: 0; text-align: center; }
-                .gate_cta input { border: 1px solid #D6DDE3; border-radius: 2px; font-size: 18px; margin-bottom: 23px; padding: 13px; width: 100%; }
-                .gate_cta p { font-size: 16px; margin-bottom: 23px; text-align: center; }
-                .adSpace {display: none;opacity: 0;}
-                          .cta {
+            html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #EDEDED;
+            font-family: Helvetica, Arial, sans-serif;
+          }
+
+          .wrapper {
+            background-color: white;
+          }
+
+          .header {
+            background-color: #BB1919;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+          }
+
+          .actual_image {
+            background-image: url(https://i.imgur.com/hE5ldI2.jpg);
+            height: 250px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+          }
+
+          .chevrons{
+            content: "";
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            border-color: rgba(255,255,255,0.8);
+            display: inline-block;
+            height: 9px;
+            width: 9px;
+            vertical-align: top;
+            transform: rotate(-135deg);
+            margin-right: 10px;
+            position: relative;
+            top: 2px;
+          }
+
+          .article {
+            width: 100%;
+          }
+
+          .image {
+            width: 100%;
+          }
+
+          .caption {
+            width: calc(100% - 20px);
+            font-size: 12px;
+            padding: 10px;
+            background-color: #EDEDED;
+          }
+
+          .pretext, h2, .main_body {
+            padding: 0 20px;
+          }
+
+
+          .pretext {
+            position: relative;
+            line-height: 1.4em;
+          }
+
+          .pretext_overlay {
+            height: 100px;
+            width: calc(100% + 10px);
+            position: absolute;
+            left: -10px;
+            bottom: 0px;
+            background-image: linear-gradient(rgba(237, 237, 237, 0), #EDEDED);
+          }
+
+          .rv_button {
+            font-size: 14px;
+            width: calc(100% - 40px);
+            padding: 20px 20px 5px 20px;
+            background-color: #EDEDED;
+            text-align: center;
+          }
+
+          .cta {
             margin: 10px 50px;
             padding: 10px 0px;
             border-radius: 4px;
@@ -33,13 +94,34 @@
             color: white;
             font-weight: bold;
           }
-                
-                          .rewarded .rv_button, .rewarded .pretext_overlay {
+
+          .skip_cta{
+            margin: 10px 50px;
+            padding: 10px 0px;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #63D663;
+            font-weight: bold;
+          }
+
+          .main_body {
+            line-height: 1.4em;
             display: none;
           }
+
+          .rewarded .rv_button, .rewarded .pretext_overlay {
+            display: none;
+          }
+
           .rewarded .main_body {
             display: block;
           }
+
+          .adSpace {
+            display: none;
+            opacity: 0;
+          }
+
           .rv_overlay {
             display: block;
             z-index: 2147483647;
@@ -48,8 +130,19 @@
             left: 0;
             width: 100%;
             height: 100%;
+            animation: fadein .5s;
+            animation-fill-mode: forwards;
           }
-      </style>
+
+          @keyframes fadein {
+              from { opacity: 0; }
+              to   { opacity: 1; }
+          }
+
+          .disabled {
+            color: rgba(255, 255, 255, 0.5);
+          }
+              </style>
 </head>
 <body>
 <header>Blog Example</header>
