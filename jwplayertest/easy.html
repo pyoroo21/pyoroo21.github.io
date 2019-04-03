@@ -16,10 +16,9 @@
 		
         }]
       });
-jwplayer().onComplete(function(e) {
-	alert("Thanks for watching!");
-	}
-);
+jwplayer("myElement").on('complete', function(){
+alert("Thanks for watching!");
+});
 
     </script>
 
