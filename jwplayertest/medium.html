@@ -25,9 +25,10 @@ jwplayer("myElement").setup({
         "playlist": playlistOne
       });
   
-  //Create a function to load a playlist var
+  //Create a function to load and play a playlist var
 function loadPlaylist(thePlaylist) {
 	jwplayer().load(thePlaylist);
+	jwplayer().play();
 };
 
 
