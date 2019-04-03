@@ -19,7 +19,7 @@ jwplayer("myElement").setup({
         }]
       });
 jwplayer("myElement").on('time', function(event){
-if (event.position > 5 && event.position < 5.1) {
+if (event.position == 5) {
  swap();
 }});
 function swap() {
