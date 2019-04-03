@@ -1,15 +1,10 @@
-<html>
-	<head><script src="https://pyoroo21.github.io/jwplayertest/jwplayer_sdk/jwplayer.js"></script></head>
-
-	
-	<body>
-
-
-    <div id="myElement"></div>
-
-    <script type="text/JavaScript">
-
-      jwplayer("myElement").setup({ 
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://pyoroo21.github.io/jwplayertest/jwplayer_sdk/jwplayer.js"></script></head>
+<body>
+<div id="myElement"></div>
+<script type="text/JavaScript">
+jwplayer("myElement").setup({ 
         "playlist": [{
             "file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
             "image": "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
@@ -19,11 +14,6 @@
 jwplayer("myElement").on('complete', function(){
 alert("Thanks for watching!");
 });
-
-    </script>
-
-
-  </body>
-
-
+</script>
+</body>
 </html>
