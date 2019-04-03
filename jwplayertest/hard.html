@@ -15,9 +15,9 @@ jwplayer("myElement").setup({
 		
         }]
       });
-jwplayer().onTime(function(event) {
+jwplayer("myElement").onTime(function(event) {
 if (event.position > 20 && event.position < 20.4) {
- jwplayer().pause(true);
+ jwplayer("myElement").pause(true);}
 };
 
 
