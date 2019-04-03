@@ -21,14 +21,14 @@ jwplayer("myElement").setup({
 jwplayer("myElement").on('time', function(event){
 if (event.position > 5 && event.position < 5.1) {
  swap();
-});
+}});
 function swap() {
   var img=document.getElementById("myimg");
   if (img.src === Img1)
     img.src=Img2;
   else 
     img.src=Img1;
-}
+};
 </script>
 
 
