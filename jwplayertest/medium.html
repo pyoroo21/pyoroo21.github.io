@@ -1,23 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<div id="myElement"></div>
+<script src="https://pyoroo21.github.io/jwplayertest/jwplayer_sdk/jwplayer.js"></script>  
+<script>jwplayer.key="QE1oxoYTcfORjonCsRkkgd3re3MvARMhgaBmZsm+PRk=";</script>
+</head>
+<body>
 
-<html>
-  <head>
+<script type="text/JavaScript">
+var playlistOne = [{
+"file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
+"image":"http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
+"title": "Video 1"
+}];
 
-    <script src="https://cdn.jwplayer.com/libraries/aBCdE12G.js"></script>
+var playlistTwo = [{
+"file": "http://bob.jwplayer.com/~test/assets/MediumVideo.mp4",
+"image":"http://bob.jwplayer.com/~test/assets/MediumImage.jpg",
+"title": "Video 2"
+}];
+  
+  
+jwplayer("myElement").setup({ 
 
-  </head>
-  <body>
-
-
-    <div id="myElement"></div>
-
-    <script type="text/JavaScript">
-
-      jwplayer("myElement").setup({ 
-        "playlist": "https://cdn.jwplayer.com/v2/media/xxxxYYYY"
       });
+  
+  //Create a function to load a playlist var
+function loadPlaylist(thePlaylist) {
+	jwplayer().load(thePlaylist);
+}
+<a href="javascript:loadPlaylist(playlistOne)">Video 1</a><br/>
+<a href="javascript:loadPlaylist(playlistTwo)">Video 2</a><br/>
 
-    </script>
-
-
-  </body>
-</html>
+</script>
+</body>
