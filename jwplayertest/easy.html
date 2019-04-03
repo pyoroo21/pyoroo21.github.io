@@ -2,21 +2,25 @@
 	<head><script src="https://pyoroo21.github.io/jwplayertest/jwplayer_sdk/jwplayer.js"></script></script></head>
 
 	
-	<script>
-jwplayer("myDiv").setup({
-    "file": "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
-    "image": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
-    "height": 360,
-    "width": 640
-});
-    jwplayer().onComplete(function() {
-        alert("Thanks for watching!");
-	}
-});
-    
-    
-  </script>
+	<body>
 
+
+    <div id="myElement"></div>
+
+    <script type="text/JavaScript">
+
+      jwplayer("myElement").setup({ 
+        "playlist": [{
+            "file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
+            image: "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
+		
+        }]
+      });
+
+    </script>
+
+
+  </body>
 
 
 </html>
