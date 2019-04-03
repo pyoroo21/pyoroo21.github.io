@@ -12,10 +12,14 @@
       jwplayer("myElement").setup({ 
         "playlist": [{
             "file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
-            image: "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
+            "image": "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
 		
         }]
       });
+jwplayer().onComplete(function() {
+	alert("Thanks for watching!");
+	}
+});
 
     </script>
 
