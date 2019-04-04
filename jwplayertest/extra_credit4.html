@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 ga('create', 'UA-63931555-1', 'auto');
 ga('send', 'pageview');
 </script>
@@ -44,17 +46,12 @@ jwplayer("myElement").setup({
       }});
 	
 	jwplayer("myElement").on('adImpression',function(event) {
-ga('send', {
-  hitType: 'event',
-  eventCategory: 'JW Player Events',
-  eventAction: 'adImpression',
-  eventLabel: '10'
-});
+
+	ga('send', 'event', 'JW Player Events', 'Play', 'adImpression',10);
 
 });
 	
 
-});
 	
 </script>
 </body>
