@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<div id="myElement"></div>
+<script src="https://pyoroo21.github.io/jwplayertest/jwplayer_sdk/jwplayer.js"></script>  
+<script>jwplayer.key="QE1oxoYTcfORjonCsRkkgd3re3MvARMhgaBmZsm+PRk=";</script>
+</head>
+<body>
+
+<script type="text/JavaScript">
+jwplayer("myElement").setup({ 
+        "playlist": [{
+            "file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
+            "image": "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
+		
+        }]
+      });
+jwplayer("myElement").on('complete', function(){
+alert("Thanks for watching!");
+});
+</script>
+</body>
+</html>
