@@ -12,11 +12,10 @@ jwplayer("myElement").setup({
         "playlist": [{
             "file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
             "image": "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
-	    "adschedule": {
-      "myPreroll": {
-      "offset": "pre",
-      "tag": "https://an.facebook.com/v1/instream/vast.xml?placementid=TEST_PLACEMENT_ID&pageurl=test.com&__mref=message_bubble"
-      }}
+	    "advertising": {
+	    client: "vast",
+	    tag: "https://an.facebook.com/v1/instream/vast.xml?placementid=TEST_PLACEMENT_ID&pageurl=test.com&__mref=message_bubble"
+	  },
 		
         }]
       });
