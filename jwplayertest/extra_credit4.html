@@ -10,6 +10,9 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-54516992-1');
+	
+	
+	
 </script>
 
 <div id="myElement"></div>
@@ -20,13 +23,14 @@
 
 <script type="text/JavaScript">
 jwplayer("myElement").setup({ 
+	"ga": {} ,
         "playlist": [{
             "file": "http://bob.jwplayer.com/~test/assets/EasyVideo.mp4",
             "image": "http://bob.jwplayer.com/~test/assets/EasyImage.jpg",
 	    
 		
         }],
-        "ga": {} ,
+        
 	"advertising": {
 	    "client": "vast",
 	"schedule": {
@@ -40,10 +44,6 @@ jwplayer("myElement").setup({
       }});
 	
 	
-	jwplayer("myElement").on('adImpression',function(event) {
-ga('send', 'event', 'JW Player Events', 'Tracking', 'adImpression');
-});
-
 
 	
 </script>
