@@ -1,0 +1,33 @@
+<div id="facebook_reword_ad_zone" style="display:none; position: relative;"></div>
+
+<script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js"async></script>
+<script type="text/javascript">
+    document.getElementById('test_watchBtn').addEventListener('click', function(e) {
+        window.ADNW = window.ADNW || {};
+        window.ADNW.v60 = window.ADNW.v60 || {};
+        window.ADNW.v60.slots = window.ADNW.v60.slots || [];
+        window.ADNW.v60.slots.push({
+            rootElement: document.getElementById('facebook_reword_ad_zone'),
+            placementid: '512004145997588_512004455997557',
+            format: 'rewarded_video',
+            testmode: true,
+            onAdLoaded: function(rootElement) {
+                console.log('Audience Network [[512004145997588_512004455997557]] ad loaded');
+                rootElement.style.display = 'block';
+            },
+            onAdError: function(errorCode, errorMessage) {
+                console.log('Audience Network [[512004145997588_512004455997557]] error (' + errorCode + ') ' +
+                errorMessage);
+            },
+            onMediaLoaded: function(rootElement, onDisplayAd) {
+                console.log('Audience Network [[512004145997588_512004455997557]] media loaded');
+            },
+            onRewardCompleted: function(rootElement){
+
+            },
+            onAdClosed: function(rootElement){
+                console.log('Audience Network [[512004145997588_512004455997557]] ad closed');
+            }
+        });
+    });
+</script>
