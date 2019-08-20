@@ -17,7 +17,7 @@
             console.log('Audience Network [1063259303770832_2103817256381693] ad loaded');
             rootElement.style.display = 'block';
           },
-          onAdError: function(errorCode, errorMessage) {
+          onAdError: function(rootElement,errorCode, errorMessage) {
             console.log('Audience Network [1063259303770832_2103817256381693] error (' + errorCode + ') ' + errorMessage);
            rootElement.style.display = 'block';
   googletag.pubads().definePassback('/36504930/ca-pub-2838349730966439-tag/kly-backfill/Facebook', [300, 250]).display();
