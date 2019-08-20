@@ -5,12 +5,6 @@
 <script src='https://www.googletagservices.com/tag/js/gpt.js'></script>
 
       <script type="text/javascript">
-
-
-function backfill(){
-    googletag.pubads().definePassback('/36504930/ca-pub-2838349730966439-tag/kly-backfill/Facebook', [300, 250]).display();
-}
-        var y=99;
         window.ADNW = window.ADNW || {};
         window.ADNW.v60 = window.ADNW.v60 || {};
         window.ADNW.v60.slots = window.ADNW.v60.slots || [];
@@ -25,21 +19,12 @@ function backfill(){
           },
           onAdError: function(errorCode, errorMessage) {
             console.log('Audience Network [1063259303770832_2103817256381693] error (' + errorCode + ') ' + errorMessage);
-y=1;
+           
+  googletag.pubads().definePassback('/36504930/ca-pub-2838349730966439-tag/kly-backfill/Facebook', [300, 250]).display();
 
-
-            console.log("Passback On");   
-            console.log(y);  
-            
-            if (y === 1) {
-  backfill();
-}
-                    
+            console.log("Passback On");        
           }
-
         });
- 
-          console.log(y);  
       </script>
     </div>
   </body>
