@@ -1,8 +1,31 @@
-
 <html>
   <body>
-<script src='https://www.googletagservices.com/tag/js/gpt.js'>
-  googletag.pubads().definePassback('/36504930/ca-pub-2838349730966439-tag/kly-backfill/Facebook', [300, 250]).display();
-</script>
+    <div style="display:none;">
+      <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async></script>
+<script src='https://www.googletagservices.com/tag/js/gpt.js'></script>
 
-  </body></html>
+      <script type="text/javascript">
+        window.ADNW = window.ADNW || {};
+        window.ADNW.v60 = window.ADNW.v60 || {};
+        window.ADNW.v60.slots = window.ADNW.v60.slots || [];
+        window.ADNW.v60.slots.push({
+          rootElement: document.currentScript.parentElement,
+          placementid: '1063259303770832_2103817256381693',
+          format: '300x250',
+          testmode: false,
+          onAdLoaded: function(rootElement) {
+            console.log('Audience Network [1063259303770832_2103817256381693] ad loaded');
+            rootElement.style.display = 'block';
+          },
+          onAdError: function(errorCode, errorMessage) {
+            console.log('Audience Network [1063259303770832_2103817256381693] error (' + errorCode + ') ' + errorMessage);
+           
+  googletag.pubads().definePassback('/36504930/ca-pub-2838349730966439-tag/kly-backfill/Facebook', [300, 250]).display();
+
+            console.log("Passback On");        
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
